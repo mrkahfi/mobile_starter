@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:formz/formz.dart';
-import 'package:kahfi_starter/src/data/repositories/auth_repository.dart';
-import 'package:kahfi_starter/src/domain/formz/formz.dart';
-import 'package:kahfi_starter/src/features/auth/presentation/sign_in/sign_in_state.dart';
+import 'package:zot_starter/src/data/repositories/auth_repository.dart';
+import 'package:zot_starter/src/domain/formz/formz.dart';
+import 'package:zot_starter/src/features/auth/presentation/sign_in/sign_in_state.dart';
 
 class SignInController extends StateNotifier<SignInState> {
   SignInController(this.ref) : super(const SignInState());

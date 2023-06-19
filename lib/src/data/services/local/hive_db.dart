@@ -1,5 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:kahfi_starter/src/app/constants/constants.dart';
+import 'package:zot_starter/src/app/constants/constants.dart';
 
 class HiveDB {
   static Future<void> init() async {

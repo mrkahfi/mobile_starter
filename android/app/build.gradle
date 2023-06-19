@@ -66,19 +66,19 @@ android {
         prod {
             dimension "flavor-type"
             applicationId "com.zot_starter.mobile"
-            resValue "string", "app_name", "Kahfi Starter"
+            resValue "string", "app_name", "ZOT Mobile Starter"
             manifestPlaceholders.deeplinkHost = "appLink"
         }
         stg {
             dimension "flavor-type"
             applicationId "com.zot_starter.mobile.stg"
-            resValue "string", "app_name", "[STG] Kahfi Starter"
+            resValue "string", "app_name", "[STG] ZOT Mobile Starter"
             manifestPlaceholders.deeplinkHost = "stgAppLink"
         }
         dev {
             dimension "flavor-type"
             applicationId "com.zot_starter.mobile.dev"
-            resValue "string", "app_name", "[DEV] Kahfi Starter"
+            resValue "string", "app_name", "[DEV] ZOT Mobile Starter"
             manifestPlaceholders.deeplinkHost = "devAppLink"
         }
     }

@@ -1,4 +1,4 @@
-# Kahfi Starter
+# ZOT Mobile Starter
 
 [![platform](https://img.shields.io/badge/platform-Flutter-blue.svg)](https://flutter.dev/)
 

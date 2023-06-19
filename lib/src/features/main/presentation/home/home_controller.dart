@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:kahfi_starter/src/features/main/application/home/example_service.dart';
-import 'package:kahfi_starter/src/features/main/presentation/home/home_state.dart';
+import 'package:zot_starter/src/features/main/application/home/example_service.dart';
+import 'package:zot_starter/src/features/main/presentation/home/home_state.dart';
 
 class HomeController extends StateNotifier<HomeState> {
   HomeController(this.ref) : super(const HomeState());

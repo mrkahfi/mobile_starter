@@ -1,5 +1,5 @@
 import 'package:formz/formz.dart';
-import 'package:kahfi_starter/src/utils/validators/string_validators.dart';
+import 'package:zot_starter/src/utils/validators/string_validators.dart';
 
 enum EmailValidationError {
   empty,

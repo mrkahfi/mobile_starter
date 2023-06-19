@@ -4,11 +4,11 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:kahfi_starter/src/data/repositories/auth_repository.dart';
-import 'package:kahfi_starter/src/features/main/presentation/home/home_screen.dart';
-import 'package:kahfi_starter/src/features/presentations.dart';
-import 'package:kahfi_starter/src/utils/dynamic_link/dynamic_link_notifier.dart';
-import 'package:kahfi_starter/src/utils/extensions/string_extension.dart';
+import 'package:zot_starter/src/data/repositories/auth_repository.dart';
+import 'package:zot_starter/src/features/main/presentation/home/home_screen.dart';
+import 'package:zot_starter/src/features/presentations.dart';
+import 'package:zot_starter/src/utils/dynamic_link/dynamic_link_notifier.dart';
+import 'package:zot_starter/src/utils/extensions/string_extension.dart';
 
 // It is better to split the route into smal chunks based on their focused area
 // or based on feature modules

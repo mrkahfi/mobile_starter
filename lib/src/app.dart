@@ -1,13 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:kahfi_starter/src/app/config/config.dart';
-import 'package:kahfi_starter/src/app/constants/constants.dart';
-import 'package:kahfi_starter/src/app/themes/app_theme.dart';
-import 'package:kahfi_starter/src/features/main/presentation/main_controller.dart';
-import 'package:kahfi_starter/src/routes/routes.dart';
-import 'package:kahfi_starter/src/utils/dynamic_link/dynamic_link_notifier.dart';
 import 'package:zog_ui/zog_ui.dart';
+import 'package:zot_starter/src/app/config/config.dart';
+import 'package:zot_starter/src/app/constants/constants.dart';
+import 'package:zot_starter/src/app/themes/app_theme.dart';
+import 'package:zot_starter/src/features/main/presentation/main_controller.dart';
+import 'package:zot_starter/src/routes/routes.dart';
+import 'package:zot_starter/src/utils/dynamic_link/dynamic_link_notifier.dart';
 
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});

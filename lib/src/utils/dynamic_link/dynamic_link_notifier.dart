@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:kahfi_starter/src/utils/dynamic_link/dynamic_link_service.dart';
+import 'package:zot_starter/src/utils/dynamic_link/dynamic_link_service.dart';
 
 class DynamicLinkNotifier extends StateNotifier<Uri?> {
   DynamicLinkNotifier({

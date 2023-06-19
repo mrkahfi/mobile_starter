@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:kahfi_starter/src/data/models/responses/example_response.dart';
-import 'package:kahfi_starter/src/data/models/responses/item_response.dart';
-import 'package:kahfi_starter/src/data/services/remote/config/config.dart';
-import 'package:kahfi_starter/src/utils/delay.dart';
+import 'package:zot_starter/src/data/models/responses/example_response.dart';
+import 'package:zot_starter/src/data/models/responses/item_response.dart';
+import 'package:zot_starter/src/data/services/remote/config/config.dart';
+import 'package:zot_starter/src/utils/delay.dart';
 
 class ExampleApi {
   const ExampleApi();

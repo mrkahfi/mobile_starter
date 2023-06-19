@@ -6,13 +6,13 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:kahfi_starter/src/app.dart';
-import 'package:kahfi_starter/src/app/config/config.dart';
-import 'package:kahfi_starter/src/app/constants/constants.dart';
-import 'package:kahfi_starter/src/data/services/local/hive_db.dart';
-import 'package:kahfi_starter/src/data/services/remote/config/http_overrides.dart';
-import 'package:kahfi_starter/src/localization/codegen_loader.g.dart';
 import 'package:stack_trace/stack_trace.dart' as stack_trace;
+import 'package:zot_starter/src/app.dart';
+import 'package:zot_starter/src/app/config/config.dart';
+import 'package:zot_starter/src/app/constants/constants.dart';
+import 'package:zot_starter/src/data/services/local/hive_db.dart';
+import 'package:zot_starter/src/data/services/remote/config/http_overrides.dart';
+import 'package:zot_starter/src/localization/codegen_loader.g.dart';
 
 void main() {
   const env = String.fromEnvironment(

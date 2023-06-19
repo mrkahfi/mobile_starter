@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zot_starter.mobile">
    <application
-        android:label="Kahfi Starter"
+        android:label="ZOT Mobile Starter"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

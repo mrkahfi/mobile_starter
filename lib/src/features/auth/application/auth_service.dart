@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:kahfi_starter/src/data/repositories/auth_repository.dart';
+import 'package:zot_starter/src/data/repositories/auth_repository.dart';
 
 class AuthService {
   AuthService(this.authRepository);

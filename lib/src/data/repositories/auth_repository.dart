@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:kahfi_starter/src/domain/entities/user.dart';
-import 'package:kahfi_starter/src/utils/delay.dart';
-import 'package:kahfi_starter/src/utils/in_memory_store.dart';
+import 'package:zot_starter/src/domain/entities/user.dart';
+import 'package:zot_starter/src/utils/delay.dart';
+import 'package:zot_starter/src/utils/in_memory_store.dart';
 
 class AuthRepository {
   final _authState = InMemoryStore<User?>(null);

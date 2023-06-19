@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:kahfi_starter/src/data/models/responses/item_response.dart';
-import 'package:kahfi_starter/src/data/services/remote/api/example_api.dart';
-import 'package:kahfi_starter/src/data/services/remote/config/config.dart';
+import 'package:zot_starter/src/data/models/responses/item_response.dart';
+import 'package:zot_starter/src/data/services/remote/api/example_api.dart';
+import 'package:zot_starter/src/data/services/remote/config/config.dart';
 
 class ExampleRepository {
   ExampleRepository(this._exampleApi);

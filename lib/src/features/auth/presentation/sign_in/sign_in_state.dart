@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:formz/formz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:kahfi_starter/src/domain/formz/formz.dart';
+import 'package:zot_starter/src/domain/formz/formz.dart';
 
 part 'sign_in_state.freezed.dart';
 

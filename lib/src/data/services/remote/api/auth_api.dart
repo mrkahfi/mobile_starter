@@ -1,6 +1,6 @@
 // ignore_for_file: inference_failure_on_function_invocation
 
-import 'package:kahfi_starter/src/data/services/remote/config/config.dart';
+import 'package:zot_starter/src/data/services/remote/config/config.dart';
 
 class AuthApi {
   AuthApi(this._dioClient);

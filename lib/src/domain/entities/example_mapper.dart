@@ -1,6 +1,6 @@
-import 'package:kahfi_starter/src/data/models/responses/item_response.dart';
-import 'package:kahfi_starter/src/data/services/remote/config/api_response.dart';
-import 'package:kahfi_starter/src/domain/entities/item.dart';
+import 'package:zot_starter/src/data/models/responses/item_response.dart';
+import 'package:zot_starter/src/data/services/remote/config/api_response.dart';
+import 'package:zot_starter/src/domain/entities/item.dart';
 
 /// Mapper is a class responsible to map raw objects retrieved from the API
 /// to models acccording to UI needs

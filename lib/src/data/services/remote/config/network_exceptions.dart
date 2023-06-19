@@ -5,7 +5,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:kahfi_starter/src/utils/extensions/string_extension.dart';
+import 'package:zot_starter/src/utils/extensions/string_extension.dart';
 
 part 'network_exceptions.freezed.dart';
 

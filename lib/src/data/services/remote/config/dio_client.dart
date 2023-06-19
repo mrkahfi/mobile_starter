@@ -8,7 +8,7 @@ import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:kahfi_starter/src/data/services/local/hive_service.dart';
+import 'package:zot_starter/src/data/services/local/hive_service.dart';
 
 const _defaultConnectTimeout = Duration(milliseconds: 15000);
 const _defaultReceiveTimeout = Duration(milliseconds: 15000);

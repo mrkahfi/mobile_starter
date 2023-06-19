@@ -1,9 +1,9 @@
 // * themes
 import 'dart:ui';
 
-// * enums
-export '../../domain/enums/enums.dart';
 export '../themes/themes.dart';
+// * enums
+export 'enums/enums.dart';
 // * keys
 export 'keys/extras_key.dart';
 export 'keys/hive_key.dart';

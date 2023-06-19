@@ -2,13 +2,14 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:formz/formz.dart';
-import 'package:kahfi_starter/gen/assets.gen.dart';
-import 'package:kahfi_starter/src/app/config/config.dart';
-import 'package:kahfi_starter/src/components/components.dart';
-import 'package:kahfi_starter/src/features/auth/presentation/sign_in/sign_in_controller.dart';
-import 'package:kahfi_starter/src/localization/locale_keys.g.dart';
-import 'package:kahfi_starter/src/utils/extensions/widget_extension.dart';
 import 'package:zog_ui/zog_ui.dart' show ZeroText;
+import 'package:zot_starter/gen/assets.gen.dart';
+import 'package:zot_starter/src/app/config/config.dart';
+import 'package:zot_starter/src/components/button.dart';
+import 'package:zot_starter/src/components/textfield.dart';
+import 'package:zot_starter/src/features/auth/presentation/sign_in/sign_in_controller.dart';
+import 'package:zot_starter/src/localization/locale_keys.g.dart';
+import 'package:zot_starter/src/utils/extensions/widget_extension.dart';
 
 class SignInScreen extends ConsumerWidget {
   const SignInScreen({super.key});

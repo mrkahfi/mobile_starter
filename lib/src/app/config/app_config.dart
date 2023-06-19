@@ -1,9 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:kahfi_starter/src/app/config/flavor_config.dart';
-import 'package:kahfi_starter/src/app/firebase/firebase_options.dart';
-import 'package:kahfi_starter/src/app/firebase/firebase_options_dev.dart'
+import 'package:zot_starter/src/app/config/flavor_config.dart';
+import 'package:zot_starter/src/app/firebase/firebase_options.dart';
+import 'package:zot_starter/src/app/firebase/firebase_options_dev.dart'
     as dev;
-import 'package:kahfi_starter/src/app/firebase/firebase_options_stg.dart'
+import 'package:zot_starter/src/app/firebase/firebase_options_stg.dart'
     as stg;
 
 /// A config that serves as a source of configuration
@@ -35,18 +35,18 @@ import 'package:kahfi_starter/src/app/firebase/firebase_options_stg.dart'
 class AppConfig {
   const AppConfig._();
 
-  /// Kahfi Starter
+  /// ZOT Mobile Starter
   static const appName = FlavorConfig<String>(
-    dev: 'Kahfi Starter',
-    stg: 'Kahfi Starter',
-    prod: 'Kahfi Starter',
+    dev: 'ZOT Mobile Starter',
+    stg: 'ZOT Mobile Starter',
+    prod: 'ZOT Mobile Starter',
   );
 
-  /// Kahfi Starter for Firebase Options
+  /// ZOT Mobile Starter for Firebase Options
   static const firebaseAppName = FlavorConfig<String>(
-    dev: 'Devkahfi_starter',
-    stg: 'Stgkahfi_starter',
-    prod: 'kahfi_starter',
+    dev: 'Devzot_starter',
+    stg: 'Stgzot_starter',
+    prod: 'zot_starter',
   );
 
   /// App Banner Name
