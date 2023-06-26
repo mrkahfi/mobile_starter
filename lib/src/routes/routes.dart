@@ -71,8 +71,6 @@ final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
     redirect: (context, state) {
       final isLoggedIn = authRepository.currentUser != null;
 
-      log('isLoggedIn $isLoggedIn ${state.location}');
-
       if (!isLoggedIn) {
         return Routes.signin.path;
       }

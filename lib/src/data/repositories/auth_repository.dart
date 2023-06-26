@@ -24,15 +24,6 @@ class AuthRepository {
     _authState.value = user;
   }
 
-  Future<void> createUserWithEmailAndPassword(
-    String email,
-    String password,
-  ) async {
-    await delay();
-
-    _createNewUser(email, password);
-  }
-
   Future<void> signOut() async {
     _authState.value = null;
   }
