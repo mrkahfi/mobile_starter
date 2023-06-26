@@ -71,11 +71,16 @@ final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
     redirect: (context, state) {
       final isLoggedIn = authRepository.currentUser != null;
 
-      if (isLoggedIn) {
-        if (state.location == Routes.signin.path) {
-          return MainTabRoute.tab1.path;
-        }
+      log('isLoggedIn $isLoggedIn ${state.location}');
+
+      if (!isLoggedIn) {
+        return Routes.signin.path;
       }
+
+      if (state.location == Routes.main.path) {
+        return MainTabRoute.tab1.path;
+      }
+
       return null;
     },
     refreshListenable: GoRouterRefreshStream(authRepository.authStateChanges()),
