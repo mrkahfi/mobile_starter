@@ -51,6 +51,11 @@ dependencies:
   # UI
   flutter_screenutil: ^5.6.0
   flutter_svg: ^2.0.4
+  ui_components:
+    git: 
+      url: https://gitlab.zero-one-group.com/zo-group/software/ui-kit-mobile.git
+      path: packages/ui_components
+
 
   # Deep links
   firebase_dynamic_links: ^5.1.0
