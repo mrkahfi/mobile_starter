@@ -56,7 +56,10 @@ class MyApp extends ConsumerWidget {
 }
 
 class _FlavorBanner extends StatelessWidget {
-  const _FlavorBanner({required this.show, this.child});
+  const _FlavorBanner({
+    required this.show,
+    this.child,
+  });
 
   final Widget? child;
   final bool show;
@@ -70,8 +73,6 @@ class _FlavorBanner extends StatelessWidget {
             color: LightColors.neutralColor[10],
             child: child,
           )
-        : Container(
-            child: child,
-          );
+        : Container(child: child);
   }
 }

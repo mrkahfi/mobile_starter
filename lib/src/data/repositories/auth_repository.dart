@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zot_starter/src/domain/entities/user.dart';
 import 'package:zot_starter/src/utils/delay.dart';
@@ -16,6 +18,7 @@ class AuthRepository {
   final List<User> _users = [];
 
   Future<void> signInWithEmailAndPassword(String email, String password) async {
+    log('signInWithEmailAndPassword');
     await delay();
     final user = User(
       uid: email.split('').reversed.join(),

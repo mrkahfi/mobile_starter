@@ -61,7 +61,7 @@ class ContentScreen extends StatelessWidget {
       appBar: ZeroAppBar(
         title: Text(title),
       ),
-      body: content != null ? Center(child: ZeroText.body1(title)) : content,
+      body: Center(child: content ?? ZeroText.body1(title)),
     );
   }
 }

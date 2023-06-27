@@ -4,8 +4,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:zot_starter/src/data/repositories/auth_repository.dart';
+import 'package:zot_starter/src/features/auth/application/auth_service.dart';
 import 'package:zot_starter/src/features/auth/presentation/sign_in/register_screen.dart';
+import 'package:zot_starter/src/features/auth/presentation/sign_out/widget/sign_out_button.dart';
 import 'package:zot_starter/src/features/main/presentation/home/home_screen.dart';
 import 'package:zot_starter/src/features/presentations.dart';
 import 'package:zot_starter/src/utils/dynamic_link/dynamic_link_notifier.dart';
@@ -17,80 +18,31 @@ part '_auth.dart';
 part '_deeplink_handler.dart';
 part '_go_router_refresh_stream.dart';
 part '_main.dart';
-
-enum Routes {
-  signin,
-  register,
-  main;
-
-  String get path {
-    if (this == main) return '/';
-    return '/${name.toKebabCase}';
-  }
-
-  String get subPath {
-    return name.toKebabCase;
-  }
-}
-
-enum MainTabRoute {
-  tab1,
-  tab2,
-  tab3,
-  tab4,
-  tab5,
-  ;
-
-  String get path {
-    return '/${name.toKebabCase}';
-  }
-
-  Widget get icon {
-    switch (this) {
-      case tab1:
-        return const Icon(Icons.home);
-      case tab2:
-        return const Icon(Icons.list);
-      case tab3:
-        return const Icon(Icons.search);
-      case tab4:
-        return const Icon(Icons.history);
-      case tab5:
-        return const Icon(Icons.person);
-    }
-  }
-
-  String get label {
-    return name.toUpperCase();
-  }
-}
+part '_route_enums.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _shellNavigatorKey = GlobalKey<NavigatorState>();
 
 final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
-  final authRepository = ref.watch(authRepositoryProvider);
+  final authService = ref.watch(authServiceProvider);
+
   return GoRouter(
-    initialLocation: Routes.main.path,
+    initialLocation: Routes.signin.path,
     navigatorKey: _rootNavigatorKey,
     debugLogDiagnostics: true,
-    redirect: (context, state) {
-      // final isLoggedIn = authRepository.currentUser != null;
+    redirect: (BuildContext context, GoRouterState state) {
+      final isLoggedIn = authService.isLoggedIn;
 
-      // if (!isLoggedIn) {
-      //   return Routes.signin.path;
-      // }
-
-      if (state.location == Routes.main.path) {
-        return MainTabRoute.tab1.path;
+      if (isLoggedIn) {
+        return Routes.main.path;
       }
 
       return null;
     },
-    refreshListenable: GoRouterRefreshStream(authRepository.authStateChanges()),
+    refreshListenable: GoRouterRefreshStream(authService.authStateChanges()),
     routes: [
-      _authRoutes,
-      _mainRoutes,
+      _authRoutes(authService),
+      _mainRoutes(authService),
     ],
   );
 });

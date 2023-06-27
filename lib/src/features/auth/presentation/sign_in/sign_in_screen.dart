@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ui_components/ui_components.dart';
+import 'package:zot_starter/src/features/auth/application/auth_service.dart';
 import 'package:zot_starter/src/routes/routes.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -49,7 +51,7 @@ class LoginHeaderSection extends StatelessWidget {
   }
 }
 
-class LoginInputSection extends StatefulWidget {
+class LoginInputSection extends ConsumerStatefulWidget {
   const LoginInputSection({
     super.key,
     this.isLoginAsResult = false,
@@ -58,12 +60,20 @@ class LoginInputSection extends StatefulWidget {
   final bool isLoginAsResult;
 
   @override
-  State<LoginInputSection> createState() => _LoginInputSectionState();
+  ConsumerState<LoginInputSection> createState() => _LoginInputSectionState();
 }
 
-class _LoginInputSectionState extends State<LoginInputSection> {
+class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
   bool isPasswordObscure = true;
   bool hasBiometric = true;
+
+  final TextEditingController _emailEditingController = TextEditingController();
+  final TextEditingController _passwordEditingController =
+      TextEditingController();
+
+  String get email => _emailEditingController.value.text;
+  String get password => _passwordEditingController.value.text;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -71,7 +81,7 @@ class _LoginInputSectionState extends State<LoginInputSection> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         InputFormWidget(
-          controller: TextEditingController(),
+          controller: _emailEditingController,
           hintText: 'Email',
           hasIconState: false,
           label: 'Email',
@@ -80,7 +90,7 @@ class _LoginInputSectionState extends State<LoginInputSection> {
         ),
         Gap.h24,
         InputFormWidget.password(
-          controller: TextEditingController(),
+          controller: _passwordEditingController,
           hintText: 'Password',
           label: 'Password',
           isObscure: isPasswordObscure,
@@ -105,10 +115,12 @@ class _LoginInputSectionState extends State<LoginInputSection> {
         Gap.h24,
         Row(
           children: [
-            const Expanded(
+            Expanded(
               child: ButtonWidget.primary(
                 text: 'Login',
                 isEnabled: true,
+                onTap: () =>
+                    ref.read(authServiceProvider).signIn(email, password),
               ),
             ),
             Gap.w12,

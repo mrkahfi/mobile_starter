@@ -1,4 +1,3 @@
-
 part of 'routes.dart';
 
 /// This class was imported from the migration guide for GoRouter 5.0
