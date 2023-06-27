@@ -49,9 +49,11 @@ class MainScreen extends ConsumerWidget {
 class ContentScreen extends StatelessWidget {
   const ContentScreen({
     required this.title,
+    this.content,
     super.key,
   });
   final String title;
+  final Widget? content;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +61,7 @@ class ContentScreen extends StatelessWidget {
       appBar: ZeroAppBar(
         title: Text(title),
       ),
-      body: Center(child: ZeroText.body1(title)),
+      body: content != null ? Center(child: ZeroText.body1(title)) : content,
     );
   }
 }

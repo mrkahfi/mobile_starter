@@ -75,12 +75,14 @@ final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
     navigatorKey: _rootNavigatorKey,
     debugLogDiagnostics: true,
     redirect: (context, state) {
-      final isLoggedIn = authRepository.currentUser != null;
+      // final isLoggedIn = authRepository.currentUser != null;
 
-      if (isLoggedIn) {
-        if (state.location == Routes.main.path) {
-          return MainTabRoute.tab1.path;
-        }
+      // if (!isLoggedIn) {
+      //   return Routes.signin.path;
+      // }
+
+      if (state.location == Routes.main.path) {
+        return MainTabRoute.tab1.path;
       }
 
       return null;

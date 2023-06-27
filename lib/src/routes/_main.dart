@@ -54,7 +54,9 @@ final _mainRoutes = ShellRoute(
       parentNavigatorKey: _shellNavigatorKey,
       pageBuilder: (BuildContext context, GoRouterState state) =>
           NoTransitionPage(
-        child: ContentScreen(title: MainTabRoute.tab5.label),
+        child: ContentScreen(
+          title: MainTabRoute.tab5.label,
+        ),
       ),
     ),
   ],
