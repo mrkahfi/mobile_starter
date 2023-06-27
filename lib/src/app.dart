@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:zog_ui/zog_ui.dart';
 import 'package:zot_starter/src/app/config/config.dart';
 import 'package:zot_starter/src/app/constants/constants.dart';
@@ -20,25 +21,36 @@ class MyApp extends ConsumerWidget {
       (prevUri, currentUri) => handleDeepLink(ref, routers, currentUri),
     );
 
-    return ZeroApp.router(
-      routeInformationParser: routers.routeInformationParser,
-      routerDelegate: routers.routerDelegate,
-      routeInformationProvider: routers.routeInformationProvider,
-      localizationsDelegates: context.localizationDelegates,
-      title: AppConfig.appName.value,
-      theme: AppTheme.light,
+    return ScreenUtilInit(
+      minTextAdapt: true,
+      splitScreenMode: true,
+      designSize: const Size(
+        AppConstants.kMobileScreenWidth,
+        AppConstants.kMobileScreenHeight,
+      ),
       builder: (context, child) {
-        final isProdVariant = F.flavor == Flavor.prod;
-        return _FlavorBanner(
-          show: !isProdVariant,
-          child: child,
+        return ZeroApp.router(
+          routeInformationParser: routers.routeInformationParser,
+          routerDelegate: routers.routerDelegate,
+          routeInformationProvider: routers.routeInformationProvider,
+          localizationsDelegates: context.localizationDelegates,
+          title: AppConfig.appName.value,
+          theme: AppTheme.light,
+          builder: (context, child) {
+            final isProdVariant = F.flavor == Flavor.prod;
+            return _FlavorBanner(
+              show: !isProdVariant,
+              child: child,
+            );
+          },
+          darkTheme: AppTheme.dark,
+          themeMode: ref.watch(mainControllerProvider).currentTheme,
+          color:
+              ref.watch(mainControllerProvider).currentTheme == ThemeMode.light
+                  ? LightColors.primaryColor
+                  : DarkColors.primaryColor,
         );
       },
-      darkTheme: AppTheme.dark,
-      themeMode: ref.watch(mainControllerProvider).currentTheme,
-      color: ref.watch(mainControllerProvider).currentTheme == ThemeMode.light
-          ? LightColors.primaryColor
-          : DarkColors.primaryColor,
     );
   }
 }

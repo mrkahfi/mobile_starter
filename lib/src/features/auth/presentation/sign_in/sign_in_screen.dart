@@ -1,82 +1,129 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:formz/formz.dart';
 import 'package:go_router/go_router.dart';
-import 'package:zog_ui/zog_ui.dart' show ZeroText;
-import 'package:zot_starter/gen/assets.gen.dart';
-import 'package:zot_starter/src/app/config/config.dart';
-import 'package:zot_starter/src/components/button.dart';
-import 'package:zot_starter/src/components/textfield.dart';
-import 'package:zot_starter/src/features/auth/presentation/sign_in/sign_in_controller.dart';
-import 'package:zot_starter/src/localization/locale_keys.g.dart';
+import 'package:ui_components/ui_components.dart';
 import 'package:zot_starter/src/routes/routes.dart';
-import 'package:zot_starter/src/utils/extensions/string_extension.dart';
-import 'package:zot_starter/src/utils/extensions/widget_extension.dart';
 
-class SignInScreen extends ConsumerWidget {
+class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final email = ref.watch(signInNotifierProvider).email;
-    final password = ref.watch(signInNotifierProvider).password;
-
-    _listenLogin(context, ref);
-
+  Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      appBar: const AppBarWidget(title: 'Login'),
+      body: ListView(
+        physics: const BouncingScrollPhysics(),
+        padding: horizontalPadding,
         children: [
-          Assets.images.authentication
-              .svg(height: MediaQuery.of(context).size.height / 3),
-          ZeroText.heading5(
-            AppConfig.appName.value,
+          const LoginHeaderSection(),
+          Gap.h16,
+          const Divider(
+            thickness: 1,
+            color: ColorApp.greyMedium2,
+            height: 0,
           ),
-          CommonTextfield(
-            label: LocaleKeys.email.tr(),
-            hintText: tr(LocaleKeys.hintEmail),
-            onChanged: (value) =>
-                ref.read(signInNotifierProvider.notifier).updateEmail(value),
-            inputType: TextInputType.name,
-            validator: (value) => email.error?.getMessage(),
-          ),
-          CommonTextfield(
-            label: LocaleKeys.password.tr(),
-            hintText: tr(LocaleKeys.hintPassword),
-            onChanged: (value) =>
-                ref.read(signInNotifierProvider.notifier).updatePassword(value),
-            inputType: TextInputType.visiblePassword,
-            validator: (value) => password.error?.getMessage(),
-          ),
-          CommonButton(
-            LocaleKeys.login,
-            isLoading: ref.watch(signInNotifierProvider).value.isLoading,
-            isDisabled:
-                ref.watch(signInNotifierProvider).status != FormzStatus.valid,
-            onPressed: () {
-              ref.read(signInNotifierProvider.notifier).submit(
-                    ref.watch(signInNotifierProvider).email.value,
-                    ref.watch(signInNotifierProvider).password.value,
-                  );
-            },
-          ),
+          Gap.h24,
+          const LoginInputSection(),
+          Gap.h16,
+          const LoginSocialMediaSection()
         ],
-      ).withDefaultPadding,
+      ),
     );
   }
+}
 
-  void _listenLogin(BuildContext context, WidgetRef ref) {
-    ref.listen(signInNotifierProvider, (previousState, currentState) {
-      currentState.value.when(
-        data: (data) => context.goNamed(Routes.main.name),
-        error: (e, stacktrace) => ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Error'.hardcoded),
+class LoginHeaderSection extends StatelessWidget {
+  const LoginHeaderSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.centerRight,
+      child: InkWell(
+        onTap: () => context.pushNamed(Routes.register.name),
+        child: Text(
+          'Register',
+          style: TypographyTheme.subtitle1Medium.w600,
+        ),
+      ),
+    );
+  }
+}
+
+class LoginInputSection extends StatefulWidget {
+  const LoginInputSection({
+    super.key,
+    this.isLoginAsResult = false,
+  });
+
+  final bool isLoginAsResult;
+
+  @override
+  State<LoginInputSection> createState() => _LoginInputSectionState();
+}
+
+class _LoginInputSectionState extends State<LoginInputSection> {
+  bool isPasswordObscure = true;
+  bool hasBiometric = true;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        InputFormWidget(
+          controller: TextEditingController(),
+          hintText: 'Email',
+          hasIconState: false,
+          label: 'Email',
+          keyboardType: TextInputType.emailAddress,
+          hasBorderState: false,
+        ),
+        Gap.h24,
+        InputFormWidget.password(
+          controller: TextEditingController(),
+          hintText: 'Password',
+          label: 'Password',
+          isObscure: isPasswordObscure,
+          onObscureTap: () {
+            setState(() {
+              isPasswordObscure = !isPasswordObscure;
+            });
+          },
+          hasBorderState: false,
+        ),
+        Gap.h4,
+        Align(
+          alignment: Alignment.centerRight,
+          child: GestureDetector(
+            onTap: () {},
+            child: Text(
+              'Forgot Password?',
+              style: TypographyTheme.body,
+            ),
           ),
         ),
-        loading: () {},
-      );
-    });
+        Gap.h24,
+        Row(
+          children: [
+            const Expanded(
+              child: ButtonWidget.primary(
+                text: 'Login',
+                isEnabled: true,
+              ),
+            ),
+            Gap.w12,
+            ButtonWidget.primaryIcon(
+              icon: Assets.icons.fingerprintIcon.svg(
+                height: SizeApp.customHeight(18),
+                width: SizeApp.customHeight(18),
+                color: hasBiometric ? ColorApp.white : ColorApp.greyMedium2,
+                package: 'ui_components',
+              ),
+              isEnabled: true,
+            ),
+          ],
+        ),
+      ],
+    );
   }
 }
