@@ -43,7 +43,4 @@ class ExampleApi {
   }
 }
 
-final exampleApiProvider = Provider<ExampleApi>((ref) {
-  // return ExampleApi(ref.read(dioClientProvider));
-  return const ExampleApi();
-});
+final exampleApiProvider = Provider<ExampleApi>((ref) => const ExampleApi());

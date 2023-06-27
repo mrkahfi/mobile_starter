@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:zot_starter/src/data/repositories/auth_repository.dart';
+import 'package:zot_starter/src/features/auth/presentation/sign_in/register_screen.dart';
 import 'package:zot_starter/src/features/main/presentation/home/home_screen.dart';
 import 'package:zot_starter/src/features/presentations.dart';
 import 'package:zot_starter/src/utils/dynamic_link/dynamic_link_notifier.dart';
@@ -19,11 +20,16 @@ part '_main.dart';
 
 enum Routes {
   signin,
+  register,
   main;
 
   String get path {
     if (this == main) return '/';
     return '/${name.toKebabCase}';
+  }
+
+  String get subPath {
+    return name.toKebabCase;
   }
 }
 
@@ -71,12 +77,10 @@ final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
     redirect: (context, state) {
       final isLoggedIn = authRepository.currentUser != null;
 
-      if (!isLoggedIn) {
-        return Routes.signin.path;
-      }
-
-      if (state.location == Routes.main.path) {
-        return MainTabRoute.tab1.path;
+      if (isLoggedIn) {
+        if (state.location == Routes.main.path) {
+          return MainTabRoute.tab1.path;
+        }
       }
 
       return null;

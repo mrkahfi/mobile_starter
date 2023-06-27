@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ui_components/ui_components.dart';
+import 'package:zot_starter/src/routes/routes.dart';
 
 class SignInScreen extends StatelessWidget {
-  const SignInScreen({
-    super.key,
-  });
+  const SignInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(
-        title: 'Login',
-      ),
+      appBar: const AppBarWidget(title: 'Login'),
       body: ListView(
         physics: const BouncingScrollPhysics(),
         padding: horizontalPadding,
@@ -26,6 +24,7 @@ class SignInScreen extends StatelessWidget {
           Gap.h24,
           const LoginInputSection(),
           Gap.h16,
+          const LoginSocialMediaSection()
         ],
       ),
     );
@@ -33,16 +32,14 @@ class SignInScreen extends StatelessWidget {
 }
 
 class LoginHeaderSection extends StatelessWidget {
-  const LoginHeaderSection({
-    super.key,
-  });
+  const LoginHeaderSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerRight,
       child: InkWell(
-        onTap: () {},
+        onTap: () => context.pushNamed(Routes.register.name),
         child: Text(
           'Register',
           style: TypographyTheme.subtitle1Medium.w600,
@@ -111,6 +108,7 @@ class _LoginInputSectionState extends State<LoginInputSection> {
             const Expanded(
               child: ButtonWidget.primary(
                 text: 'Login',
+                isEnabled: true,
               ),
             ),
             Gap.w12,
@@ -121,6 +119,7 @@ class _LoginInputSectionState extends State<LoginInputSection> {
                 color: hasBiometric ? ColorApp.white : ColorApp.greyMedium2,
                 package: 'ui_components',
               ),
+              isEnabled: true,
             ),
           ],
         ),

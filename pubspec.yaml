@@ -56,7 +56,6 @@ dependencies:
       url: https://gitlab.zero-one-group.com/zo-group/software/ui-kit-mobile.git
       path: packages/ui_components
 
-
   # Deep links
   firebase_dynamic_links: ^5.1.0
 

@@ -19,6 +19,7 @@ class MyApp extends ConsumerWidget {
       dynamicLinkNotifierProvider,
       (prevUri, currentUri) => handleDeepLink(ref, routers, currentUri),
     );
+
     return ScreenUtilInit(
       minTextAdapt: true,
       splitScreenMode: true,
