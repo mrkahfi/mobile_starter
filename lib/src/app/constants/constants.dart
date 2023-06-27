@@ -25,4 +25,8 @@ class AppConstants {
   static const localeEN = Locale(en, 'US');
   static const langID = 'lang_ID';
   static const langEN = 'lang_EN';
+
+  // size
+  static const double kMobileScreenWidth = 390;
+  static const double kMobileScreenHeight = 844;
 }
