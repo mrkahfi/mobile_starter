@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ui_components/ui_components.dart';
-import 'package:zot_starter/src/features/auth/application/auth_service.dart';
+import 'package:zot_starter/src/features/auth/presentation/sign_in/sign_in_controller.dart';
 import 'package:zot_starter/src/routes/routes.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -76,6 +76,7 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
 
   @override
   Widget build(BuildContext context) {
+    _listenAuth(context);
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,8 +120,9 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
               child: ButtonWidget.primary(
                 text: 'Login',
                 isEnabled: true,
-                onTap: () =>
-                    ref.read(authServiceProvider).signIn(email, password),
+                onTap: () => ref
+                    .read(signInNotifierProvider.notifier)
+                    .submit(email, password),
               ),
             ),
             Gap.w12,
@@ -137,5 +139,13 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
         ),
       ],
     );
+  }
+
+  void _listenAuth(BuildContext context) {
+    ref.listen(signInNotifierProvider, (previous, next) {
+      if (previous == null) return;
+
+      context.goNamed(Routes.main.name);
+    });
   }
 }
