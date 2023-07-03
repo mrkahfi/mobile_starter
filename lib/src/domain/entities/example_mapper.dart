@@ -1,5 +1,5 @@
 import 'package:zot_starter/src/data/models/responses/item_response.dart';
-import 'package:zot_starter/src/data/services/remote/config/api_response.dart';
+import 'package:zot_starter/src/data/sources/remote/config/result.dart';
 import 'package:zot_starter/src/domain/entities/item.dart';
 
 /// Mapper is a class responsible to map raw objects retrieved from the API
@@ -7,14 +7,12 @@ import 'package:zot_starter/src/domain/entities/item.dart';
 class ExampleMapper {
   const ExampleMapper._();
 
-  static ApiResponse<List<Item>> mapItemListResponseToItemList(
-    ApiResponse<List<ItemResponse>> response,
+  static Result<List<Item>> mapItemListResponseToItemList(
+    Result<List<ItemResponse>> response,
   ) {
     return response.when(
-      success: (data) => ApiResponse.success(
-        _mapItemListRespoToItemList(data),
-      ),
-      failure: ApiResponse.failure,
+      success: (data) => Result.success(_mapItemListRespoToItemList(data)),
+      failure: Result.failure,
     );
   }
 

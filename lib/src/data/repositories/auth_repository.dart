@@ -6,9 +6,8 @@ import 'package:zot_starter/src/utils/delay.dart';
 import 'package:zot_starter/src/utils/in_memory_store.dart';
 
 class AuthRepository {
-  AuthRepository({
-    InMemoryStore<User?>? authState,
-  }) : _authState = authState ?? InMemoryStore<User?>(null);
+  AuthRepository({InMemoryStore<User?>? authState})
+      : _authState = authState ?? InMemoryStore<User?>(null);
 
   final InMemoryStore<User?> _authState;
 

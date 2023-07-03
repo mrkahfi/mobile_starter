@@ -10,8 +10,8 @@ import 'package:stack_trace/stack_trace.dart' as stack_trace;
 import 'package:zot_starter/src/app.dart';
 import 'package:zot_starter/src/app/config/config.dart';
 import 'package:zot_starter/src/app/constants/constants.dart';
-import 'package:zot_starter/src/data/services/local/hive_db.dart';
-import 'package:zot_starter/src/data/services/remote/config/http_overrides.dart';
+import 'package:zot_starter/src/data/sources/local/hive_db.dart';
+import 'package:zot_starter/src/data/sources/remote/config/http_overrides.dart';
 import 'package:zot_starter/src/localization/codegen_loader.g.dart';
 
 void main() {

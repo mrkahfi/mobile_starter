@@ -6,7 +6,7 @@ import 'package:zog_ui/zog_ui.dart';
 import 'package:zot_starter/src/app/config/config.dart';
 import 'package:zot_starter/src/app/constants/constants.dart';
 import 'package:zot_starter/src/app/themes/app_theme.dart';
-import 'package:zot_starter/src/features/main/presentation/main_controller.dart';
+import 'package:zot_starter/src/presentation/features/main/main_controller.dart';
 import 'package:zot_starter/src/routes/routes.dart';
 import 'package:zot_starter/src/utils/dynamic_link/dynamic_link_notifier.dart';
 

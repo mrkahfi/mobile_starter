@@ -7,7 +7,7 @@ enum PasswordValidationError {
   invalid,
   ;
 
-  String getMessage() {
+  String get message {
     switch (this) {
       case empty:
         return "Password can't be empty";

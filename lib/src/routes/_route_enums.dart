@@ -1,17 +1,15 @@
 part of 'routes.dart';
 
 enum Routes {
+  onboarding,
+  splash,
   signin,
   register,
   main;
 
-  String get path {
-    return '/${name.toKebabCase}';
-  }
+  String get path => '/${name.toKebabCase}';
 
-  String get subPath {
-    return name.toKebabCase;
-  }
+  String get subPath => name.toKebabCase;
 }
 
 enum MainTabRoute {

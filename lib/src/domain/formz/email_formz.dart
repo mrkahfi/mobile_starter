@@ -6,7 +6,7 @@ enum EmailValidationError {
   invalid,
   ;
 
-  String getMessage() {
+  String get message {
     switch (this) {
       case empty:
         return "Email can't be empty";
