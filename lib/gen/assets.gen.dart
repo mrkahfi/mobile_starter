@@ -11,6 +11,24 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/apple_icon.svg
+  SvgGenImage get appleIcon => const SvgGenImage('assets/icons/apple_icon.svg');
+
+  /// File path: assets/icons/facebook_icon.svg
+  SvgGenImage get facebookIcon =>
+      const SvgGenImage('assets/icons/facebook_icon.svg');
+
+  /// File path: assets/icons/google_icon.svg
+  SvgGenImage get googleIcon =>
+      const SvgGenImage('assets/icons/google_icon.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [appleIcon, facebookIcon, googleIcon];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -48,6 +66,7 @@ class $AssetsTranslationsGen {
 class Assets {
   Assets._();
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsJsonsGen jsons = $AssetsJsonsGen();
   static const $AssetsTranslationsGen translations = $AssetsTranslationsGen();

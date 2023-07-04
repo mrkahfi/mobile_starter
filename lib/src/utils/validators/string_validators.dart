@@ -4,6 +4,16 @@ mixin StringValidator {
   bool isValid(String value);
 }
 
+class EqualityValidator implements StringValidator {
+  EqualityValidator(this.other);
+
+  final String other;
+  @override
+  bool isValid(String value) {
+    return value == other;
+  }
+}
+
 class RegexValidator implements StringValidator {
   RegexValidator({required this.regexSource});
 

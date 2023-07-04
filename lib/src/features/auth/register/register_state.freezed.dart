@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'login_state.dart';
+part of 'register_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,34 +15,36 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$LoginState {
+mixin _$RegisterState {
   EmailFormz get email => throw _privateConstructorUsedError;
   PasswordFormz get password => throw _privateConstructorUsedError;
+  ConfirmPasswordFormz get password2 => throw _privateConstructorUsedError;
   FormzStatus get status => throw _privateConstructorUsedError;
   AsyncValue<User?> get value => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $LoginStateCopyWith<LoginState> get copyWith =>
+  $RegisterStateCopyWith<RegisterState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginStateCopyWith<$Res> {
-  factory $LoginStateCopyWith(
-          LoginState value, $Res Function(LoginState) then) =
-      _$LoginStateCopyWithImpl<$Res, LoginState>;
+abstract class $RegisterStateCopyWith<$Res> {
+  factory $RegisterStateCopyWith(
+          RegisterState value, $Res Function(RegisterState) then) =
+      _$RegisterStateCopyWithImpl<$Res, RegisterState>;
   @useResult
   $Res call(
       {EmailFormz email,
       PasswordFormz password,
+      ConfirmPasswordFormz password2,
       FormzStatus status,
       AsyncValue<User?> value});
 }
 
 /// @nodoc
-class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
-    implements $LoginStateCopyWith<$Res> {
-  _$LoginStateCopyWithImpl(this._value, this._then);
+class _$RegisterStateCopyWithImpl<$Res, $Val extends RegisterState>
+    implements $RegisterStateCopyWith<$Res> {
+  _$RegisterStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -54,6 +56,7 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
   $Res call({
     Object? email = null,
     Object? password = null,
+    Object? password2 = null,
     Object? status = null,
     Object? value = null,
   }) {
@@ -66,6 +69,10 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as PasswordFormz,
+      password2: null == password2
+          ? _value.password2
+          : password2 // ignore: cast_nullable_to_non_nullable
+              as ConfirmPasswordFormz,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -79,26 +86,27 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
 }
 
 /// @nodoc
-abstract class _$$_LoginStateCopyWith<$Res>
-    implements $LoginStateCopyWith<$Res> {
-  factory _$$_LoginStateCopyWith(
-          _$_LoginState value, $Res Function(_$_LoginState) then) =
-      __$$_LoginStateCopyWithImpl<$Res>;
+abstract class _$$_RegisterStateCopyWith<$Res>
+    implements $RegisterStateCopyWith<$Res> {
+  factory _$$_RegisterStateCopyWith(
+          _$_RegisterState value, $Res Function(_$_RegisterState) then) =
+      __$$_RegisterStateCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {EmailFormz email,
       PasswordFormz password,
+      ConfirmPasswordFormz password2,
       FormzStatus status,
       AsyncValue<User?> value});
 }
 
 /// @nodoc
-class __$$_LoginStateCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$_LoginState>
-    implements _$$_LoginStateCopyWith<$Res> {
-  __$$_LoginStateCopyWithImpl(
-      _$_LoginState _value, $Res Function(_$_LoginState) _then)
+class __$$_RegisterStateCopyWithImpl<$Res>
+    extends _$RegisterStateCopyWithImpl<$Res, _$_RegisterState>
+    implements _$$_RegisterStateCopyWith<$Res> {
+  __$$_RegisterStateCopyWithImpl(
+      _$_RegisterState _value, $Res Function(_$_RegisterState) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -106,10 +114,11 @@ class __$$_LoginStateCopyWithImpl<$Res>
   $Res call({
     Object? email = null,
     Object? password = null,
+    Object? password2 = null,
     Object? status = null,
     Object? value = null,
   }) {
-    return _then(_$_LoginState(
+    return _then(_$_RegisterState(
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -118,6 +127,10 @@ class __$$_LoginStateCopyWithImpl<$Res>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as PasswordFormz,
+      password2: null == password2
+          ? _value.password2
+          : password2 // ignore: cast_nullable_to_non_nullable
+              as ConfirmPasswordFormz,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -132,10 +145,11 @@ class __$$_LoginStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoginState implements _LoginState {
-  const _$_LoginState(
+class _$_RegisterState implements _RegisterState {
+  const _$_RegisterState(
       {this.email = const EmailFormz.pure(),
       this.password = const PasswordFormz.pure(),
+      this.password2 = const ConfirmPasswordFormz.pure(),
       this.status = FormzStatus.pure,
       this.value = const AsyncValue.data(null)});
 
@@ -147,6 +161,9 @@ class _$_LoginState implements _LoginState {
   final PasswordFormz password;
   @override
   @JsonKey()
+  final ConfirmPasswordFormz password2;
+  @override
+  @JsonKey()
   final FormzStatus status;
   @override
   @JsonKey()
@@ -154,48 +171,54 @@ class _$_LoginState implements _LoginState {
 
   @override
   String toString() {
-    return 'LoginState(email: $email, password: $password, status: $status, value: $value)';
+    return 'RegisterState(email: $email, password: $password, password2: $password2, status: $status, value: $value)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoginState &&
+            other is _$_RegisterState &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password) &&
+            (identical(other.password2, password2) ||
+                other.password2 == password2) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, email, password, status, value);
+  int get hashCode =>
+      Object.hash(runtimeType, email, password, password2, status, value);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoginStateCopyWith<_$_LoginState> get copyWith =>
-      __$$_LoginStateCopyWithImpl<_$_LoginState>(this, _$identity);
+  _$$_RegisterStateCopyWith<_$_RegisterState> get copyWith =>
+      __$$_RegisterStateCopyWithImpl<_$_RegisterState>(this, _$identity);
 }
 
-abstract class _LoginState implements LoginState {
-  const factory _LoginState(
+abstract class _RegisterState implements RegisterState {
+  const factory _RegisterState(
       {final EmailFormz email,
       final PasswordFormz password,
+      final ConfirmPasswordFormz password2,
       final FormzStatus status,
-      final AsyncValue<User?> value}) = _$_LoginState;
+      final AsyncValue<User?> value}) = _$_RegisterState;
 
   @override
   EmailFormz get email;
   @override
   PasswordFormz get password;
   @override
+  ConfirmPasswordFormz get password2;
+  @override
   FormzStatus get status;
   @override
   AsyncValue<User?> get value;
   @override
   @JsonKey(ignore: true)
-  _$$_LoginStateCopyWith<_$_LoginState> get copyWith =>
+  _$$_RegisterStateCopyWith<_$_RegisterState> get copyWith =>
       throw _privateConstructorUsedError;
 }

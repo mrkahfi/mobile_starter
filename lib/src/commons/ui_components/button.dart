@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:zog_ui/zog_ui.dart';
-import 'package:zot_starter/src/localization/locale_keys.g.dart';
 
 class CommonButton extends StatelessWidget {
   const CommonButton(
@@ -28,8 +27,9 @@ class CommonButton extends StatelessWidget {
         style: ZeroButtonStyle(
           fixedSize: Size(MediaQuery.of(context).size.width - 40, height),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(10),
           ),
+          disabledBackgroundColor: context.theme.disabledColor,
         ),
         isDisabled: isDisabled || isLoading,
         onPressed: onPressed,
@@ -39,9 +39,9 @@ class CommonButton extends StatelessWidget {
                 width: 24,
                 child: ZeroProgressIndicator.circular(),
               )
-            : const Text(
-                LocaleKeys.login,
-                style: TextStyle(color: Colors.white, fontSize: 16),
+            : Text(
+                text,
+                style: const TextStyle(color: Colors.white, fontSize: 16),
               ),
       ),
     );

@@ -23,6 +23,20 @@ class AuthApi {
         },
       ) as User;
 
+  Future<User> register({
+    required String email,
+    required String password,
+    required String password2,
+  }) async =>
+      await _dioClient.post(
+        Endpoint.register,
+        data: {
+          'email': email,
+          'password': password,
+          'confirm_password': password2,
+        },
+      ) as User;
+
   Future<void> logout() async => delay();
 }
 

@@ -14,9 +14,40 @@ class AuthRepository {
   Stream<User?> authStateChanges() => _authState.stream;
   User? get currentUser => _authState.value;
 
-  Future<Result<User>> login(String email, String password) async {
+  Future<Result<User>> login(
+    String email,
+    String password,
+  ) async {
     try {
       // final user = await authApi.login();
+      await delay();
+      final user = User(
+        uid: email.split('').reversed.join(),
+        email: email,
+      );
+
+      _authState.value = user;
+      return Result.success(user);
+    } on Exception catch (e, st) {
+      return Result.failure(
+        NetworkExceptions.getDioException(e, st),
+        st,
+      );
+    } catch (e, st) {
+      return Result.failure(
+        NetworkExceptions.getError(e, st),
+        st,
+      );
+    }
+  }
+
+  Future<Result<User>> register(
+    String email,
+    String password,
+    String password2,
+  ) async {
+    try {
+      // final user = await authApi.register();
       await delay();
       final user = User(
         uid: email.split('').reversed.join(),

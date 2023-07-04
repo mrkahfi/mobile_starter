@@ -4,8 +4,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zot_starter/src/commons/data/datasource/remote/api/example_api.dart';
 import 'package:zot_starter/src/commons/data/datasource/remote/config/config.dart';
+import 'package:zot_starter/src/commons/data/mappers/item_mapper.dart';
 import 'package:zot_starter/src/commons/data/models/responses/example_response.dart';
 import 'package:zot_starter/src/commons/data/models/responses/item_response.dart';
+import 'package:zot_starter/src/commons/domain/entities/item.dart';
 import 'package:zot_starter/src/utils/delay.dart';
 
 class ExampleRepository {
@@ -13,7 +15,7 @@ class ExampleRepository {
   final ExampleApi exampleApi;
 
   /// This just mocks the fetch request from REST API
-  Future<Result<List<ItemResponse>>> fetchItems() async {
+  Future<Result<List<Item>>> fetchItems() async {
     try {
       // final response = await _exampleApi.getItems();
       await delay();
@@ -22,7 +24,9 @@ class ExampleRepository {
       final response =
           ExampleResponse.fromJson(jsonDecode(json) as Map<String, dynamic>);
 
-      return Result.success(response.items);
+      final list = ItemMapper.mapItemListRespoToItemList(response.items);
+
+      return Result.success(list);
     } on Exception catch (e, st) {
       return Result.failure(
         NetworkExceptions.getDioException(e, st),

@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:zot_starter/src/commons/data/datasource/remote/config/result.dart';
 import 'package:zot_starter/src/commons/data/repositories/auth_repository.dart';
 import 'package:zot_starter/src/commons/domain/entities/user.dart';
 import 'package:zot_starter/src/commons/domain/enums/auth_status.dart';
@@ -8,11 +9,11 @@ class AuthService {
 
   final AuthRepository authRepository;
 
-  void signIn(String email, String password) {
-    authRepository.login(email, password);
+  Future<Result<User>> login(String email, String password) {
+    return authRepository.login(email, password);
   }
 
-  void signOut() => authRepository.logout();
+  void logout() => authRepository.logout();
 
   Stream<User?> authStateChanges() => authRepository.authStateChanges();
 

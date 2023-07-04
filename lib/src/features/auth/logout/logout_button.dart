@@ -10,9 +10,7 @@ class LogoutButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return ZeroButton.primary(
       child: const Text('Sign Out'),
-      onPressed: () {
-        ref.read(authServiceProvider).signOut();
-      },
+      onPressed: () => ref.read(authServiceProvider).logout(),
     );
   }
 }
