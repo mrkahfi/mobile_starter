@@ -1,49 +1,52 @@
-import 'dart:developer';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:zot_starter/src/data/sources/sources.dart';
 import 'package:zot_starter/src/domain/entities/user.dart';
 import 'package:zot_starter/src/utils/delay.dart';
 import 'package:zot_starter/src/utils/in_memory_store.dart';
 
 class AuthRepository {
-  AuthRepository({InMemoryStore<User?>? authState})
+  AuthRepository(this.authApi, {InMemoryStore<User?>? authState})
       : _authState = authState ?? InMemoryStore<User?>(null);
 
+  final AuthApi authApi;
   final InMemoryStore<User?> _authState;
 
   Stream<User?> authStateChanges() => _authState.stream;
   User? get currentUser => _authState.value;
 
-  final List<User> _users = [];
+  Future<Result<User>> login(String email, String password) async {
+    try {
+      // final user = await authApi.login();
+      await delay();
+      final user = User(
+        uid: email.split('').reversed.join(),
+        email: email,
+      );
 
-  Future<void> signInWithEmailAndPassword(String email, String password) async {
-    log('signInWithEmailAndPassword');
-    await delay();
-    final user = User(
-      uid: email.split('').reversed.join(),
-      email: email,
-    );
-    _authState.value = user;
+      _authState.value = user;
+      return Result.success(user);
+    } on Exception catch (e, st) {
+      return Result.failure(
+        NetworkExceptions.getDioException(e, st),
+        st,
+      );
+    } catch (e, st) {
+      return Result.failure(
+        NetworkExceptions.getError(e, st),
+        st,
+      );
+    }
   }
 
-  Future<void> signOut() async {
+  Future<void> logout() async {
     _authState.value = null;
   }
 
   void dispose() => _authState.close();
-
-  void _createNewUser(String email, String password) {
-    final user = User(
-      uid: email.split('').reversed.join(),
-      email: email,
-    );
-    _users.add(user);
-    _authState.value = user;
-  }
 }
 
 final authRepositoryProvider = Provider<AuthRepository>((ref) {
-  final auth = AuthRepository();
+  final auth = AuthRepository(ref.watch(authApiProvider));
   ref.onDispose(auth.dispose);
   return auth;
 });

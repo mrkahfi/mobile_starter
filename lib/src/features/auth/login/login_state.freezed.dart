@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'sign_in_state.dart';
+part of 'login_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,22 +15,22 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$SignInState {
+mixin _$LoginState {
   EmailFormz get email => throw _privateConstructorUsedError;
   PasswordFormz get password => throw _privateConstructorUsedError;
   FormzStatus get status => throw _privateConstructorUsedError;
   AsyncValue<void> get value => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $SignInStateCopyWith<SignInState> get copyWith =>
+  $LoginStateCopyWith<LoginState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SignInStateCopyWith<$Res> {
-  factory $SignInStateCopyWith(
-          SignInState value, $Res Function(SignInState) then) =
-      _$SignInStateCopyWithImpl<$Res, SignInState>;
+abstract class $LoginStateCopyWith<$Res> {
+  factory $LoginStateCopyWith(
+          LoginState value, $Res Function(LoginState) then) =
+      _$LoginStateCopyWithImpl<$Res, LoginState>;
   @useResult
   $Res call(
       {EmailFormz email,
@@ -40,9 +40,9 @@ abstract class $SignInStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SignInStateCopyWithImpl<$Res, $Val extends SignInState>
-    implements $SignInStateCopyWith<$Res> {
-  _$SignInStateCopyWithImpl(this._value, this._then);
+class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
+    implements $LoginStateCopyWith<$Res> {
+  _$LoginStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -79,11 +79,11 @@ class _$SignInStateCopyWithImpl<$Res, $Val extends SignInState>
 }
 
 /// @nodoc
-abstract class _$$_SignInStateCopyWith<$Res>
-    implements $SignInStateCopyWith<$Res> {
-  factory _$$_SignInStateCopyWith(
-          _$_SignInState value, $Res Function(_$_SignInState) then) =
-      __$$_SignInStateCopyWithImpl<$Res>;
+abstract class _$$_LoginStateCopyWith<$Res>
+    implements $LoginStateCopyWith<$Res> {
+  factory _$$_LoginStateCopyWith(
+          _$_LoginState value, $Res Function(_$_LoginState) then) =
+      __$$_LoginStateCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -94,11 +94,11 @@ abstract class _$$_SignInStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SignInStateCopyWithImpl<$Res>
-    extends _$SignInStateCopyWithImpl<$Res, _$_SignInState>
-    implements _$$_SignInStateCopyWith<$Res> {
-  __$$_SignInStateCopyWithImpl(
-      _$_SignInState _value, $Res Function(_$_SignInState) _then)
+class __$$_LoginStateCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res, _$_LoginState>
+    implements _$$_LoginStateCopyWith<$Res> {
+  __$$_LoginStateCopyWithImpl(
+      _$_LoginState _value, $Res Function(_$_LoginState) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -109,7 +109,7 @@ class __$$_SignInStateCopyWithImpl<$Res>
     Object? status = null,
     Object? value = null,
   }) {
-    return _then(_$_SignInState(
+    return _then(_$_LoginState(
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -132,8 +132,8 @@ class __$$_SignInStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SignInState implements _SignInState {
-  const _$_SignInState(
+class _$_LoginState implements _LoginState {
+  const _$_LoginState(
       {this.email = const EmailFormz.pure(),
       this.password = const PasswordFormz.pure(),
       this.status = FormzStatus.pure,
@@ -154,14 +154,14 @@ class _$_SignInState implements _SignInState {
 
   @override
   String toString() {
-    return 'SignInState(email: $email, password: $password, status: $status, value: $value)';
+    return 'LoginState(email: $email, password: $password, status: $status, value: $value)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SignInState &&
+            other is _$_LoginState &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password) &&
@@ -175,16 +175,16 @@ class _$_SignInState implements _SignInState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SignInStateCopyWith<_$_SignInState> get copyWith =>
-      __$$_SignInStateCopyWithImpl<_$_SignInState>(this, _$identity);
+  _$$_LoginStateCopyWith<_$_LoginState> get copyWith =>
+      __$$_LoginStateCopyWithImpl<_$_LoginState>(this, _$identity);
 }
 
-abstract class _SignInState implements SignInState {
-  const factory _SignInState(
+abstract class _LoginState implements LoginState {
+  const factory _LoginState(
       {final EmailFormz email,
       final PasswordFormz password,
       final FormzStatus status,
-      final AsyncValue<void> value}) = _$_SignInState;
+      final AsyncValue<void> value}) = _$_LoginState;
 
   @override
   EmailFormz get email;
@@ -196,6 +196,6 @@ abstract class _SignInState implements SignInState {
   AsyncValue<void> get value;
   @override
   @JsonKey(ignore: true)
-  _$$_SignInStateCopyWith<_$_SignInState> get copyWith =>
+  _$$_LoginStateCopyWith<_$_LoginState> get copyWith =>
       throw _privateConstructorUsedError;
 }

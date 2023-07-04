@@ -1,48 +1,52 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ui_components/ui_components.dart';
-import 'package:zot_starter/src/presentation/features/auth/login/sign_in_controller.dart';
-import 'package:zot_starter/src/routes/routes.dart';
+import 'package:zog_ui/zog_ui.dart' hide Assets;
+import 'package:zot_starter/src/features/auth/login/login_controller.dart';
+import 'package:zot_starter/src/routing/routes.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(title: 'Login'),
-      body: ListView(
+      appBar: ZeroAppBar(),
+      body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         padding: horizontalPadding,
-        children: [
-          const LoginHeaderSection(),
-          Gap.h16,
-          const Divider(
-            thickness: 1,
-            color: ColorApp.greyMedium2,
-            height: 0,
-          ),
-          Gap.h24,
-          const LoginInputSection(),
-          Gap.h16,
-          const LoginSocialMediaSection()
-        ],
+        child: Column(
+          children: [
+            const RegisterHeaderSection(),
+            Gap.h16,
+            const Divider(
+              thickness: 1,
+              color: ColorApp.greyMedium2,
+              height: 0,
+            ),
+            Gap.h24,
+            const RegisterInputSection(),
+            Gap.h16,
+            const LoginSocialMediaSection()
+          ],
+        ),
       ),
     );
   }
 }
 
-class LoginHeaderSection extends StatelessWidget {
-  const LoginHeaderSection({super.key});
+class RegisterHeaderSection extends StatelessWidget {
+  const RegisterHeaderSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerRight,
       child: InkWell(
-        onTap: () => context.pushNamed(Routes.register.name),
+        onTap: () => context.goNamed(Routes.login.name),
         child: Text(
-          'Register',
+          'Login',
           style: TypographyTheme.subtitle1Medium.w600,
         ),
       ),
@@ -50,19 +54,15 @@ class LoginHeaderSection extends StatelessWidget {
   }
 }
 
-class LoginInputSection extends ConsumerStatefulWidget {
-  const LoginInputSection({
-    super.key,
-    this.isLoginAsResult = false,
-  });
-
-  final bool isLoginAsResult;
+class RegisterInputSection extends ConsumerStatefulWidget {
+  const RegisterInputSection({super.key});
 
   @override
-  ConsumerState<LoginInputSection> createState() => _LoginInputSectionState();
+  ConsumerState<RegisterInputSection> createState() =>
+      _RegisterInputSectionState();
 }
 
-class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
+class _RegisterInputSectionState extends ConsumerState<RegisterInputSection> {
   bool isPasswordObscure = true;
   bool hasBiometric = true;
 
@@ -119,8 +119,9 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
               child: ButtonWidget.primary(
                 text: 'Login',
                 isEnabled: true,
+                isLoading: ref.watch(loginControllerProvider).value.isLoading,
                 onTap: () => ref
-                    .read(signInNotifierProvider.notifier)
+                    .read(loginControllerProvider.notifier)
                     .submit(email, password),
               ),
             ),
@@ -129,7 +130,10 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
               icon: Assets.icons.fingerprintIcon.svg(
                 height: SizeApp.customHeight(18),
                 width: SizeApp.customHeight(18),
-                color: hasBiometric ? ColorApp.white : ColorApp.greyMedium2,
+                theme: SvgTheme(
+                  currentColor:
+                      hasBiometric ? ColorApp.white : ColorApp.greyMedium2,
+                ),
                 package: 'ui_components',
               ),
               isEnabled: true,
@@ -141,7 +145,7 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
   }
 
   void _listenAuth(BuildContext context) {
-    ref.listen(signInNotifierProvider, (previous, next) {
+    ref.listen(loginControllerProvider, (previous, next) {
       if (previous == null) return;
 
       context.goNamed(Routes.main.name);

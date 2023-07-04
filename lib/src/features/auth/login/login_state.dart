@@ -3,14 +3,14 @@ import 'package:formz/formz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:zot_starter/src/domain/formz/formz.dart';
 
-part 'sign_in_state.freezed.dart';
+part 'login_state.freezed.dart';
 
 @freezed
-class SignInState with _$SignInState {
-  const factory SignInState({
+class LoginState with _$LoginState {
+  const factory LoginState({
     @Default(EmailFormz.pure()) EmailFormz email,
     @Default(PasswordFormz.pure()) PasswordFormz password,
     @Default(FormzStatus.pure) FormzStatus status,
     @Default(AsyncValue.data(null)) AsyncValue<void> value,
-  }) = _SignInState;
+  }) = _LoginState;
 }

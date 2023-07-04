@@ -1,11 +1,6 @@
 class Endpoint {
-  /// START OF AUTH ENDPOINTS ================================================
-  static const String signIn = '/auth/signin';
-
-  /// END OF AUTH ENDPOINTS ==================================================
-
-  /// START OF ITEMS ENDPOINTS =============================================
-  static const String items = '/items/list';
-
-  /// END OF ITEMS ENDPOINTS ================================================
+  static const String register = '/auth/register';
+  static const String login = '/auth/login';
+  static const String logout = '/auth/logout';
+  static const String fetchItems = '/items';
 }

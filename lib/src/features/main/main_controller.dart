@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/presentation/features/main/main_state.dart';
+import 'package:zot_starter/src/features/main/main_state.dart';
 
 class AppController extends StateNotifier<AppState> {
   AppController() : super(const AppState());

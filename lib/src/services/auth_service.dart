@@ -9,10 +9,10 @@ class AuthService {
   final AuthRepository authRepository;
 
   void signIn(String email, String password) {
-    authRepository.signInWithEmailAndPassword(email, password);
+    authRepository.login(email, password);
   }
 
-  void signOut() => authRepository.signOut();
+  void signOut() => authRepository.logout();
 
   Stream<User?> authStateChanges() => authRepository.authStateChanges();
 

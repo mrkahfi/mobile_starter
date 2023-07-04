@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/presentation/features/onboarding/onboarding_state.dart';
+import 'package:zot_starter/src/features/onboarding/onboarding_state.dart';
 
 class OnboardingController extends StateNotifier<OnboardingState> {
   OnboardingController(this.ref) : super(const OnboardingState());
@@ -8,4 +8,5 @@ class OnboardingController extends StateNotifier<OnboardingState> {
 
 final onboardingControllerProvider =
     StateNotifierProvider<OnboardingController, OnboardingState>(
-        OnboardingController.new);
+  OnboardingController.new,
+);

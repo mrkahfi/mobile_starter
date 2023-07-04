@@ -28,6 +28,7 @@ dependencies:
 
   # Networking
   dio: ^5.1.1
+  logger: any  #for logging purpose
 
   # Local Storage
   hive_flutter: ^1.1.0

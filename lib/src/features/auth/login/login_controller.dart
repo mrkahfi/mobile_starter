@@ -2,10 +2,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:formz/formz.dart';
 import 'package:zot_starter/src/data/repositories/auth_repository.dart';
 import 'package:zot_starter/src/domain/formz/formz.dart';
-import 'package:zot_starter/src/presentation/features/auth/login/sign_in_state.dart';
+import 'package:zot_starter/src/features/auth/login/login_state.dart';
 
-class SignInController extends StateNotifier<SignInState> {
-  SignInController(this.ref) : super(const SignInState());
+class LoginController extends StateNotifier<LoginState> {
+  LoginController(this.ref) : super(const LoginState());
 
   final Ref ref;
 
@@ -33,13 +33,11 @@ class SignInController extends StateNotifier<SignInState> {
   }
 
   Future<void> _authenticate(String email, String password) async {
-    await ref
-        .read(authRepositoryProvider)
-        .signInWithEmailAndPassword(email, password);
+    await ref.read(authRepositoryProvider).login(email, password);
   }
 }
 
-final signInNotifierProvider =
-    StateNotifierProvider<SignInController, SignInState>(
-  SignInController.new,
+final loginControllerProvider =
+    StateNotifierProvider<LoginController, LoginState>(
+  LoginController.new,
 );

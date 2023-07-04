@@ -8,8 +8,8 @@ import 'package:ui_components/gen/assets.gen.dart';
 import 'package:ui_components/themes/app_color_constant.dart';
 import 'package:ui_components/themes/app_size_constant.dart';
 import 'package:ui_components/utils/theme_extension.dart';
-import 'package:zot_starter/src/presentation/features/onboarding/widgets/onboarding_item.dart';
-import 'package:zot_starter/src/routes/routes.dart';
+import 'package:zot_starter/src/features/onboarding/widgets/onboarding_item.dart';
+import 'package:zot_starter/src/routing/routes.dart';
 import 'package:zot_starter/src/services/app_service.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
@@ -126,7 +126,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                       text: 'Start',
                       onTap: () {
                         ref.read(appServiceProvider).onboarded = true;
-                        context.goNamed(Routes.signin.name);
+                        context.goNamed(Routes.login.name);
                       },
                     )
                   else

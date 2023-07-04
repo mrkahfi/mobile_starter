@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/presentation/features/main/home/home_state.dart';
+import 'package:zot_starter/src/features/main/home/home_state.dart';
 import 'package:zot_starter/src/services/main_service.dart';
 
 class HomeController extends StateNotifier<HomeState> {

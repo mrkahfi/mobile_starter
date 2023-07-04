@@ -3,7 +3,7 @@ part of 'routes.dart';
 enum Routes {
   onboarding,
   splash,
-  signin,
+  login,
   register,
   main;
 

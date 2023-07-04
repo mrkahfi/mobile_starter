@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/presentation/features/splash/splash_state.dart';
+import 'package:zot_starter/src/features/splash/splash_state.dart';
 import 'package:zot_starter/src/services/app_service.dart';
 
 class SplashController extends StateNotifier<SplashState> {

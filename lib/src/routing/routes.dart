@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:zot_starter/src/domain/enums/auth_status.dart';
-import 'package:zot_starter/src/presentation/features/auth/login/register_screen.dart';
-import 'package:zot_starter/src/presentation/features/auth/login/sign_in_screen.dart';
-import 'package:zot_starter/src/presentation/features/main/home/home_screen.dart';
-import 'package:zot_starter/src/presentation/features/main/main_screen.dart';
-import 'package:zot_starter/src/presentation/features/onboarding/onboarding_screen.dart';
-import 'package:zot_starter/src/presentation/features/splash/splash_screen.dart';
+import 'package:zot_starter/src/features/auth/login/login_screen.dart';
+import 'package:zot_starter/src/features/auth/register/register_screen.dart';
+import 'package:zot_starter/src/features/main/home/home_screen.dart';
+import 'package:zot_starter/src/features/main/main_screen.dart';
+import 'package:zot_starter/src/features/onboarding/onboarding_screen.dart';
+import 'package:zot_starter/src/features/splash/splash_screen.dart';
 import 'package:zot_starter/src/services/app_service.dart';
 import 'package:zot_starter/src/services/auth_service.dart';
 import 'package:zot_starter/src/utils/dynamic_link/dynamic_link_notifier.dart';
@@ -24,7 +24,9 @@ part '_main.dart';
 part '_route_enums.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
-final _shellNavigatorKey = GlobalKey<NavigatorState>();
+final _initNavigatorKey = GlobalKey<NavigatorState>();
+final _mainTabNavigatorKey = GlobalKey<NavigatorState>();
+final _authNavigatorKey = GlobalKey<NavigatorState>();
 
 final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
   final appService = ref.watch(appServiceProvider);
@@ -52,8 +54,8 @@ final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
     },
     refreshListenable: appService,
     routes: [
-      _initRoutes,
-      _authRoutes,
+      ref.watch(initRoutesProvider),
+      ref.watch(authRoutesProvider),
       ref.watch(_mainRouteProvider),
     ],
   );

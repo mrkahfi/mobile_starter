@@ -15,21 +15,13 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$OnboardingState {
-  AsyncValue<List<Item>?> get value => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $OnboardingStateCopyWith<OnboardingState> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+mixin _$OnboardingState {}
 
 /// @nodoc
 abstract class $OnboardingStateCopyWith<$Res> {
   factory $OnboardingStateCopyWith(
           OnboardingState value, $Res Function(OnboardingState) then) =
       _$OnboardingStateCopyWithImpl<$Res, OnboardingState>;
-  @useResult
-  $Res call({AsyncValue<List<Item>?> value});
 }
 
 /// @nodoc
@@ -41,30 +33,13 @@ class _$OnboardingStateCopyWithImpl<$Res, $Val extends OnboardingState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? value = null,
-  }) {
-    return _then(_value.copyWith(
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as AsyncValue<List<Item>?>,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$_OnboardingStateCopyWith<$Res>
-    implements $OnboardingStateCopyWith<$Res> {
+abstract class _$$_OnboardingStateCopyWith<$Res> {
   factory _$$_OnboardingStateCopyWith(
           _$_OnboardingState value, $Res Function(_$_OnboardingState) then) =
       __$$_OnboardingStateCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({AsyncValue<List<Item>?> value});
 }
 
 /// @nodoc
@@ -74,61 +49,28 @@ class __$$_OnboardingStateCopyWithImpl<$Res>
   __$$_OnboardingStateCopyWithImpl(
       _$_OnboardingState _value, $Res Function(_$_OnboardingState) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? value = null,
-  }) {
-    return _then(_$_OnboardingState(
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as AsyncValue<List<Item>?>,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$_OnboardingState implements _OnboardingState {
-  const _$_OnboardingState({this.value = const AsyncValue.data(null)});
-
-  @override
-  @JsonKey()
-  final AsyncValue<List<Item>?> value;
+  const _$_OnboardingState();
 
   @override
   String toString() {
-    return 'OnboardingState(value: $value)';
+    return 'OnboardingState()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_OnboardingState &&
-            (identical(other.value, value) || other.value == value));
+        (other.runtimeType == runtimeType && other is _$_OnboardingState);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, value);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_OnboardingStateCopyWith<_$_OnboardingState> get copyWith =>
-      __$$_OnboardingStateCopyWithImpl<_$_OnboardingState>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 }
 
 abstract class _OnboardingState implements OnboardingState {
-  const factory _OnboardingState({final AsyncValue<List<Item>?> value}) =
-      _$_OnboardingState;
-
-  @override
-  AsyncValue<List<Item>?> get value;
-  @override
-  @JsonKey(ignore: true)
-  _$$_OnboardingStateCopyWith<_$_OnboardingState> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _OnboardingState() = _$_OnboardingState;
 }

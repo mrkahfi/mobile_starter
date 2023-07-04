@@ -4,7 +4,7 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
   final authService = ref.watch(authServiceProvider);
 
   return ShellRoute(
-    navigatorKey: _shellNavigatorKey,
+    navigatorKey: _mainTabNavigatorKey,
     pageBuilder: (context, state, child) {
       return NoTransitionPage(
         child: MainScreen(
@@ -17,27 +17,23 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
       GoRoute(
         path: Routes.main.path,
         name: Routes.main.name,
-        parentNavigatorKey: _shellNavigatorKey,
-        redirect: (context, state) {
-          final unauthenticated =
-              authService.authStatus == AuthStatus.unauthenticated;
-
-          if (unauthenticated) return Routes.signin.path;
-
-          return null;
-        },
+        parentNavigatorKey: _mainTabNavigatorKey,
+        redirect: (context, state) =>
+            authService.authStatus == AuthStatus.unauthenticated
+                ? Routes.login.path
+                : null,
         pageBuilder: (BuildContext context, GoRouterState state) =>
             const NoTransitionPage(child: HomeScreen()),
       ),
       GoRoute(
         path: MainTabRoute.tab1.path,
-        parentNavigatorKey: _shellNavigatorKey,
+        parentNavigatorKey: _mainTabNavigatorKey,
         pageBuilder: (BuildContext context, GoRouterState state) =>
             const NoTransitionPage(child: HomeScreen()),
       ),
       GoRoute(
         path: MainTabRoute.tab2.path,
-        parentNavigatorKey: _shellNavigatorKey,
+        parentNavigatorKey: _mainTabNavigatorKey,
         pageBuilder: (BuildContext context, GoRouterState state) =>
             NoTransitionPage(
           child: ContentScreen(title: MainTabRoute.tab2.label),
@@ -45,7 +41,7 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
       ),
       GoRoute(
         path: MainTabRoute.tab3.path,
-        parentNavigatorKey: _shellNavigatorKey,
+        parentNavigatorKey: _mainTabNavigatorKey,
         pageBuilder: (BuildContext context, GoRouterState state) =>
             NoTransitionPage(
           child: ContentScreen(title: MainTabRoute.tab3.label),
@@ -53,7 +49,7 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
       ),
       GoRoute(
         path: MainTabRoute.tab4.path,
-        parentNavigatorKey: _shellNavigatorKey,
+        parentNavigatorKey: _mainTabNavigatorKey,
         pageBuilder: (BuildContext context, GoRouterState state) =>
             NoTransitionPage(
           child: ContentScreen(title: MainTabRoute.tab4.label),
@@ -61,7 +57,7 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
       ),
       GoRoute(
         path: MainTabRoute.tab5.path,
-        parentNavigatorKey: _shellNavigatorKey,
+        parentNavigatorKey: _mainTabNavigatorKey,
         pageBuilder: (BuildContext context, GoRouterState state) =>
             NoTransitionPage(
           child: ContentScreen(

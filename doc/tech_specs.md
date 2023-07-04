@@ -205,7 +205,7 @@ Adding a new feature or making changes on the existing ones require a good under
 > Or if you want to target a specific model, consider using `--build-filter` like this.
 >
 > ```
-> $ flutter pub run build_runner build --build-filter="package:/mobile/lib/src/presentation/features/fund/data/models/fund_details.g.dart"
+> $ flutter pub run build_runner build --build-filter="package:/mobile/lib/src/features/fund/data/models/fund_details.g.dart"
 >
 > ```
 
