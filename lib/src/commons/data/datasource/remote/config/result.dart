@@ -1,6 +1,6 @@
 // ignore: depend_on_referenced_packages
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:zot_starter/src/data/sources/remote/config/network_exceptions.dart';
+import 'package:zot_starter/src/commons/data/datasource/remote/config/network_exceptions.dart';
 
 part 'result.freezed.dart';
 

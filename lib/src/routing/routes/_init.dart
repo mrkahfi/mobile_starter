@@ -1,4 +1,4 @@
-part of 'routes.dart';
+part of '../routes.dart';
 
 final initRoutesProvider = Provider(
   (ref) => ShellRoute(

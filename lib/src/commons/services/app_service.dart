@@ -3,8 +3,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/data/sources/local/hive_service.dart';
-import 'package:zot_starter/src/domain/enums/auth_status.dart';
+import 'package:zot_starter/src/commons/data/datasource/local/hive_service.dart';
+import 'package:zot_starter/src/commons/domain/enums/auth_status.dart';
 
 class AppService with ChangeNotifier {
   AppService(this.ref);

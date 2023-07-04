@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:formz/formz.dart';
-import 'package:zot_starter/src/data/repositories/auth_repository.dart';
-import 'package:zot_starter/src/domain/formz/formz.dart';
+import 'package:zot_starter/src/commons/data/repositories/auth_repository.dart';
+import 'package:zot_starter/src/commons/domain/formz/formz.dart';
 import 'package:zot_starter/src/features/auth/login/login_state.dart';
 
 class LoginController extends StateNotifier<LoginState> {

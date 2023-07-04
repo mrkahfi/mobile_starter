@@ -1,9 +1,9 @@
 // ignore_for_file: inference_failure_on_function_invocation
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/data/sources/remote/config/config.dart';
-import 'package:zot_starter/src/data/sources/remote/config/dio_client.dart';
-import 'package:zot_starter/src/domain/entities/user.dart';
+import 'package:zot_starter/src/commons/data/datasource/remote/config/config.dart';
+import 'package:zot_starter/src/commons/data/datasource/remote/config/dio_client.dart';
+import 'package:zot_starter/src/commons/domain/entities/user.dart';
 import 'package:zot_starter/src/utils/delay.dart';
 
 class AuthApi {

@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:zot_starter/src/data/models/responses/item_response.dart';
+import 'package:zot_starter/src/commons/data/models/responses/item_response.dart';
 
 /// The use of [freezed] must be pragmatical, means not every object
 /// should be freezed. If there is no need for all of its generated functions,

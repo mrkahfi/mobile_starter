@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/data/repositories/example_repository.dart';
-import 'package:zot_starter/src/data/sources/remote/config/result.dart';
-import 'package:zot_starter/src/domain/entities/example_mapper.dart';
-import 'package:zot_starter/src/domain/entities/item.dart';
+import 'package:zot_starter/src/commons/data/datasource/remote/config/result.dart';
+import 'package:zot_starter/src/commons/data/mappers/item_mapper.dart';
+import 'package:zot_starter/src/commons/data/repositories/example_repository.dart';
+import 'package:zot_starter/src/commons/domain/entities/item.dart';
 
 class MainService {
   MainService(this.exampleRepository);
@@ -11,7 +11,7 @@ class MainService {
 
   Future<Result<List<Item>>> fetchItems() async {
     final response = await exampleRepository.fetchItems();
-    return ExampleMapper.mapItemListResponseToItemList(response);
+    return ItemMapper.mapItemListResponseToItemList(response);
   }
 }
 

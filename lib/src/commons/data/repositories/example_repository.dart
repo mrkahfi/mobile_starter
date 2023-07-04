@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/data/models/responses/example_response.dart';
-import 'package:zot_starter/src/data/models/responses/item_response.dart';
-import 'package:zot_starter/src/data/sources/remote/api/example_api.dart';
-import 'package:zot_starter/src/data/sources/remote/config/config.dart';
+import 'package:zot_starter/src/commons/data/datasource/remote/api/example_api.dart';
+import 'package:zot_starter/src/commons/data/datasource/remote/config/config.dart';
+import 'package:zot_starter/src/commons/data/models/responses/example_response.dart';
+import 'package:zot_starter/src/commons/data/models/responses/item_response.dart';
 import 'package:zot_starter/src/utils/delay.dart';
 
 class ExampleRepository {

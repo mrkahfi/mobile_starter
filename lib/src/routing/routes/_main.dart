@@ -1,4 +1,4 @@
-part of 'routes.dart';
+part of '../routes.dart';
 
 final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
   final authService = ref.watch(authServiceProvider);

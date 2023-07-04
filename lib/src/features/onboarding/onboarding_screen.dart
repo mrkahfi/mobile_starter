@@ -8,9 +8,9 @@ import 'package:ui_components/gen/assets.gen.dart';
 import 'package:ui_components/themes/app_color_constant.dart';
 import 'package:ui_components/themes/app_size_constant.dart';
 import 'package:ui_components/utils/theme_extension.dart';
+import 'package:zot_starter/src/commons/services/app_service.dart';
 import 'package:zot_starter/src/features/onboarding/widgets/onboarding_item.dart';
 import 'package:zot_starter/src/routing/routes.dart';
-import 'package:zot_starter/src/services/app_service.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
   const OnboardingScreen({super.key});

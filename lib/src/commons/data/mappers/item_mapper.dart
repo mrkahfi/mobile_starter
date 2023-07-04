@@ -1,11 +1,11 @@
-import 'package:zot_starter/src/data/models/responses/item_response.dart';
-import 'package:zot_starter/src/data/sources/remote/config/result.dart';
-import 'package:zot_starter/src/domain/entities/item.dart';
+import 'package:zot_starter/src/commons/data/datasource/remote/config/result.dart';
+import 'package:zot_starter/src/commons/data/models/responses/item_response.dart';
+import 'package:zot_starter/src/commons/domain/entities/item.dart';
 
 /// Mapper is a class responsible to map raw objects retrieved from the API
 /// to models acccording to UI needs
-class ExampleMapper {
-  const ExampleMapper._();
+class ItemMapper {
+  const ItemMapper._();
 
   static Result<List<Item>> mapItemListResponseToItemList(
     Result<List<ItemResponse>> response,
