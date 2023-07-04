@@ -163,63 +163,25 @@ class NetworkExceptions with _$NetworkExceptions {
   /// what type of [NetworkExceptions], then we show it.
   static String getErrorMessage(NetworkExceptions error) {
     return error.when(
-      notImplemented: () {
-        return 'Not Implemented'.hardcoded;
-      },
-      requestCancelled: () {
-        return 'Request Cancelled'.hardcoded;
-      },
-      internalServerError: () {
-        return 'Internal Server Error'.hardcoded;
-      },
-      notFound: (String reason) {
-        return reason;
-      },
-      serviceUnavailable: () {
-        return 'Service unavailable'.hardcoded;
-      },
-      methodNotAllowed: () {
-        return 'Method Not Allowed'.hardcoded;
-      },
-      badRequest: () {
-        return 'Bad request'.hardcoded;
-      },
-      badCertificate: () {
-        return 'Bad Certificate'.hardcoded;
-      },
-      unauthorizedRequest: (String reason) {
-        return reason;
-      },
-      unexpectedError: () {
-        return 'Unexpected error occurred'.hardcoded;
-      },
-      requestTimeout: () {
-        return 'Connection request timeout'.hardcoded;
-      },
-      noInternetConnection: () {
-        return 'No internet connection'.hardcoded;
-      },
-      conflict: () {
-        return 'Error due to a conflict'.hardcoded;
-      },
-      sendTimeout: () {
-        return 'Send timeout in connection with API server'.hardcoded;
-      },
-      unableToProcess: () {
-        return 'Unable to process the data'.hardcoded;
-      },
-      defaultError: (String error) {
-        return error;
-      },
-      formatException: () {
-        return 'Unexpected error occurred'.hardcoded;
-      },
-      notAcceptable: () {
-        return 'Not acceptable'.hardcoded;
-      },
-      unProcessableEntity: (error) {
-        return 'Un Processable Entity'.hardcoded;
-      },
+      notImplemented: () => 'Not Implemented'.hardcoded,
+      requestCancelled: () => 'Request Cancelled'.hardcoded,
+      internalServerError: () => 'Internal Server Error'.hardcoded,
+      notFound: (String reason) => reason,
+      serviceUnavailable: () => 'Service unavailable'.hardcoded,
+      methodNotAllowed: () => 'Method Not Allowed'.hardcoded,
+      badRequest: () => 'Bad request'.hardcoded,
+      badCertificate: () => 'Bad Certificate'.hardcoded,
+      unauthorizedRequest: (String reason) => reason,
+      unexpectedError: () => 'Unexpected error occurred'.hardcoded,
+      requestTimeout: () => 'Connection request timeout'.hardcoded,
+      noInternetConnection: () => 'No internet connection'.hardcoded,
+      conflict: () => 'Error due to a conflict'.hardcoded,
+      sendTimeout: () => 'Send timeout in connection with API server'.hardcoded,
+      unableToProcess: () => 'Unable to process the data'.hardcoded,
+      defaultError: (String error) => error,
+      formatException: () => 'Unexpected error occurred'.hardcoded,
+      notAcceptable: () => 'Not acceptable'.hardcoded,
+      unProcessableEntity: (error) => 'Un Processable Entity'.hardcoded,
     );
   }
 
