@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zog_ui/zog_ui.dart' hide Assets;
-import 'package:zot_starter/src/app/themes/constants/themes.dart';
+import 'package:zot_starter/src/app/themes/foundation/sizes.dart';
 import 'package:zot_starter/src/commons/ui_components/button.dart';
 import 'package:zot_starter/src/commons/ui_components/textfield.dart';
 import 'package:zot_starter/src/features/auth/login/login_controller.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:zot_starter/src/app/themes/constants/themes.dart';
+import 'package:zot_starter/src/app/themes/foundation/sizes.dart';
 import 'package:zot_starter/src/utils/extensions/theme_extension.dart';
 
 class WelcomePageItem extends StatelessWidget {

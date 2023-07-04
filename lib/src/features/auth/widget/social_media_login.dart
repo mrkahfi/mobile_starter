@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zot_starter/src/app/themes/constants/themes.dart';
+import 'package:zog_ui/zog_ui.dart';
+import 'package:zot_starter/src/app/themes/foundation/sizes.dart';
 import 'package:zot_starter/src/commons/ui_components/button.dart';
 
 class LoginSocialMediaSection extends StatelessWidget {
@@ -19,8 +20,13 @@ class LoginSocialMediaSection extends StatelessWidget {
           ),
         ),
         Gap.h24,
-        CommonButton(
-          'Continue with Apple',
+        ZeroButton.primary(
+          child: const Row(
+            children: [
+              // Assets.icons.
+              Text('Continue with Apple'),
+            ],
+          ),
           onPressed: () {},
         ),
         Gap.h16,
