@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ui_components/ui_components.dart';
 import 'package:zog_ui/zog_ui.dart' hide Assets;
+import 'package:zot_starter/src/app/themes/constants/themes.dart';
+import 'package:zot_starter/src/commons/ui_components/button.dart';
+import 'package:zot_starter/src/commons/ui_components/textfield.dart';
 import 'package:zot_starter/src/features/auth/login/login_controller.dart';
+import 'package:zot_starter/src/features/auth/widget/social_media_login.dart';
 import 'package:zot_starter/src/routing/routes.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -22,7 +24,6 @@ class RegisterScreen extends StatelessWidget {
             Gap.h16,
             const Divider(
               thickness: 1,
-              color: ColorApp.greyMedium2,
               height: 0,
             ),
             Gap.h24,
@@ -45,10 +46,7 @@ class RegisterHeaderSection extends StatelessWidget {
       alignment: Alignment.centerRight,
       child: InkWell(
         onTap: () => context.goNamed(Routes.login.name),
-        child: Text(
-          'Login',
-          style: TypographyTheme.subtitle1Medium.w600,
-        ),
+        child: const Text('Login'),
       ),
     );
   }
@@ -80,35 +78,25 @@ class _RegisterInputSectionState extends ConsumerState<RegisterInputSection> {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        InputFormWidget(
+        CommonTextfield(
           controller: _emailEditingController,
           hintText: 'Email',
-          hasIconState: false,
           label: 'Email',
-          keyboardType: TextInputType.emailAddress,
-          hasBorderState: false,
+          inputType: TextInputType.emailAddress,
         ),
         Gap.h24,
-        InputFormWidget.password(
+        CommonTextfield(
           controller: _passwordEditingController,
           hintText: 'Password',
           label: 'Password',
-          isObscure: isPasswordObscure,
-          onObscureTap: () {
-            setState(() {
-              isPasswordObscure = !isPasswordObscure;
-            });
-          },
-          hasBorderState: false,
         ),
         Gap.h4,
         Align(
           alignment: Alignment.centerRight,
           child: GestureDetector(
             onTap: () {},
-            child: Text(
+            child: const Text(
               'Forgot Password?',
-              style: TypographyTheme.body,
             ),
           ),
         ),
@@ -116,27 +104,18 @@ class _RegisterInputSectionState extends ConsumerState<RegisterInputSection> {
         Row(
           children: [
             Expanded(
-              child: ButtonWidget.primary(
-                text: 'Login',
-                isEnabled: true,
+              child: CommonButton(
+                'Register',
                 isLoading: ref.watch(loginControllerProvider).value.isLoading,
-                onTap: () => ref
+                onPressed: () => ref
                     .read(loginControllerProvider.notifier)
                     .submit(email, password),
               ),
             ),
             Gap.w12,
-            ButtonWidget.primaryIcon(
-              icon: Assets.icons.fingerprintIcon.svg(
-                height: SizeApp.customHeight(18),
-                width: SizeApp.customHeight(18),
-                theme: SvgTheme(
-                  currentColor:
-                      hasBiometric ? ColorApp.white : ColorApp.greyMedium2,
-                ),
-                package: 'ui_components',
-              ),
-              isEnabled: true,
+            ZeroButtonIcon.primary(
+              icon: const Icon(Icons.fingerprint),
+              onPressed: () {},
             ),
           ],
         ),

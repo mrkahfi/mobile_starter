@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ui_components/ui_components.dart';
+import 'package:zot_starter/src/app/themes/constants/themes.dart';
+import 'package:zot_starter/src/utils/extensions/theme_extension.dart';
 
 class WelcomePageItem extends StatelessWidget {
   const WelcomePageItem({
@@ -18,27 +19,22 @@ class WelcomePageItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ColoredBox(
       color: context.theme.colorScheme.primary,
-      child: PaddingWidget(
-        child: Column(
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.2,
-            ),
-            icon ?? Container(),
-            Text(
-              title,
-              style: TypographyTheme.title3.copyWith(color: ColorApp.white),
-              textAlign: TextAlign.center,
-            ),
-            Gap.h16,
-            Text(
-              content,
-              style: TypographyTheme.subtitle1Medium
-                  .copyWith(color: ColorApp.white),
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ),
+      child: Column(
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.2,
+          ),
+          icon ?? Container(),
+          Text(
+            title,
+            textAlign: TextAlign.center,
+          ),
+          Gap.h16,
+          Text(
+            content,
+            textAlign: TextAlign.center,
+          ),
+        ],
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_components/ui_components.dart';
+import 'package:zot_starter/src/app/themes/constants/themes.dart';
+import 'package:zot_starter/src/commons/ui_components/button.dart';
 
 class LoginSocialMediaSection extends StatelessWidget {
   const LoginSocialMediaSection({
@@ -12,38 +13,25 @@ class LoginSocialMediaSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Align(
+        const Align(
           child: Text(
             'Login instantly using your social media',
-            style: TypographyTheme.body.toGreyMedium2,
           ),
         ),
         Gap.h24,
-        ButtonWidget.secondary(
-          text: 'Continue with Apple',
-          icon: Assets.icons.appleIcon.svg(
-            package: 'ui_components',
-          ),
-          isSmallSize: true,
-          onTap: () {},
+        CommonButton(
+          'Continue with Apple',
+          onPressed: () {},
         ),
         Gap.h16,
-        ButtonWidget.secondary(
-          text: 'Continue with Google',
-          icon: Assets.icons.googleIcon.svg(
-            package: 'ui_components',
-          ),
-          isSmallSize: true,
-          onTap: () {},
+        CommonButton(
+          'Continue with Google',
+          onPressed: () {},
         ),
         Gap.h16,
-        ButtonWidget.secondary(
-          text: 'Continue with Facebook',
-          icon: Assets.icons.facebookIcon.svg(
-            package: 'ui_components',
-          ),
-          isSmallSize: true,
-          onTap: () {},
+        CommonButton(
+          'Continue with Facebook',
+          onPressed: () {},
         ),
       ],
     );
