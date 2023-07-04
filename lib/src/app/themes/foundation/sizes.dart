@@ -46,9 +46,9 @@ class AppSizes {
   static final h96 = 96.0.h;
 
   /// Sizes for custom width or height outside the 8 pixel rules
-  static double customWidth(double value) => value.w;
+  static double w(double value) => value.w;
 
-  static double customHeight(double value) => value.h;
+  static double h(double value) => value.h;
 }
 
 /// Constant for gaps to be used in the app with respecting 8 pixel rules

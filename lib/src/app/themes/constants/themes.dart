@@ -1,1 +1,1 @@
-export 'app_size_constant.dart';
+export '../foundation/sizes.dart';
