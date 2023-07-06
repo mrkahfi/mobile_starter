@@ -106,6 +106,7 @@ class _RegisterInputSectionState extends ConsumerState<RegisterInputSection> {
           controller: _password2EditingController,
           hintText: tr(LocaleKeys.hintConfirmPassword),
           label: LocaleKeys.labelFormConfirmPassword.tr(),
+          obscureText: true,
           onChanged: (value) => ref
               .read(registerControllerProvider.notifier)
               .updatePassword2(value),
@@ -126,9 +127,11 @@ class _RegisterInputSectionState extends ConsumerState<RegisterInputSection> {
           isDisabled:
               ref.watch(registerControllerProvider).status != FormzStatus.valid,
           isLoading: ref.watch(registerControllerProvider).value.isLoading,
-          onPressed: () => ref
-              .read(registerControllerProvider.notifier)
-              .submit(emailForm.value, passwordForm.value),
+          onPressed: () => ref.read(registerControllerProvider.notifier).submit(
+                emailForm.value,
+                passwordForm.value,
+                password2Form.value,
+              ),
         ),
       ],
     );

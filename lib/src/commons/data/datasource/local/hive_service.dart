@@ -1,58 +1,54 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:zot_starter/src/app/constants/constants.dart';
+import 'package:zot_starter/src/commons/data/datasource/local/secure_storage_service.dart';
+import 'package:zot_starter/src/commons/domain/entities/user.dart';
 
 class HiveService {
-  final hiveUser = Hive.box<String>(HiveKey.userBox);
-  final hiveUserToken = Hive.box<String>(HiveKey.userTokenBox);
-  final hiveEmail = Hive.box<String>(HiveKey.emailBox);
-  final hivePassword = Hive.box<String>(HiveKey.passwordBox);
+  HiveService(this.secureStorageService);
 
-  final hiveInitialized = Hive.box<bool>(HiveKey.isInitializedBox);
-  final hiveOnboarded = Hive.box<bool>(HiveKey.isOnboardedBox);
+  final SecureStorageService secureStorageService;
+
+  final userBox = Hive.box<User>(HiveKey.userBox);
+  final appInitializedBox = Hive.box<bool>(HiveKey.isInitializedBox);
+  final appOnboardedBox = Hive.box<bool>(HiveKey.isOnboardedBox);
+  final encryptedBox = Hive.box<String?>(HiveKey.encryptedBox);
+
+  Future<void> close() async {
+    await Hive.close();
+  }
 
   set onboarded(bool isOnboarded) =>
-      hiveOnboarded.put(HiveKey.isOnboarded, isOnboarded);
+      appOnboardedBox.put(HiveKey.isOnboarded, isOnboarded);
 
-  bool get onboarded => hiveOnboarded.get(HiveKey.isOnboarded) ?? false;
+  bool get onboarded => appOnboardedBox.get(HiveKey.isOnboarded) ?? false;
 
   set initialized(bool isInitialized) =>
-      hiveInitialized.put(HiveKey.isInitialized, isInitialized);
+      appInitializedBox.put(HiveKey.isInitialized, isInitialized);
 
-  bool get initialized => hiveInitialized.get(HiveKey.isInitialized) ?? false;
+  bool get initialized => appInitializedBox.get(HiveKey.isInitialized) ?? false;
+
+  /// Set Current User
+  void saveCurrentUser(User user) => userBox.put(HiveKey.user, user);
+
+  /// Get current User
+  User? getCurrentUser() => userBox.get(HiveKey.user);
 
   /// Delete Current User
-  void deleteCurrentUser() => hiveUser.delete(HiveKey.user);
-
-  /// Get Current User
-  String? getUserToken() => hiveUserToken.get(HiveKey.userToken);
+  void deleteCurrentUser() => userBox.delete(HiveKey.user);
 
   /// Set User Token
-  void saveUserToken(String token) =>
-      hiveUserToken.put(HiveKey.userToken, token);
+  Future<void> saveUserToken(String token) async =>
+      encryptedBox.put(HiveKey.userToken, token);
 
-  /// Delete User Token
-  void deleteUserToken() => hiveUserToken.delete(HiveKey.userToken);
+  /// Get Current User
+  Future<String?> getUserToken() async => encryptedBox.get(HiveKey.userToken);
 
-  /// Set User Credential
-  void saveUserCredential({
-    required String email,
-    required String password,
-  }) {
-    hiveEmail.put(HiveKey.email, email);
-    hivePassword.put(HiveKey.password, password);
-  }
-
-  /// Get Credential Email
-  String? getCredentialEmail() => hiveEmail.get(HiveKey.email);
-
-  /// Get Credential Password
-  String? getCredentialPassword() => hivePassword.get(HiveKey.password);
-
-  /// Set logout
-  void logout() {
-    deleteCurrentUser();
-  }
+  /// Delete Ccrrent User Token
+  void deleteUserToken() => encryptedBox.delete(HiveKey.userToken);
 }
 
-final hiveServiceProvider = Provider<HiveService>((ref) => HiveService());
+final hiveServiceProvider = Provider<HiveService>((ref) {
+  final secureStorage = ref.watch(secureStorageProvider)..init();
+  return HiveService(secureStorage);
+});

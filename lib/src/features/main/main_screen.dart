@@ -45,7 +45,7 @@ class MainScreen extends ConsumerWidget {
   }
 }
 
-class ContentScreen extends StatelessWidget {
+class ContentScreen extends ConsumerWidget {
   const ContentScreen({
     required this.title,
     this.content,
@@ -55,7 +55,7 @@ class ContentScreen extends StatelessWidget {
   final Widget? content;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: ZeroAppBar(
         title: Text(title),

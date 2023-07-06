@@ -1,6 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-
 import 'package:zog_ui/zog_ui.dart';
 
 class CommonTextfield extends StatelessWidget {
@@ -10,6 +9,7 @@ class CommonTextfield extends StatelessWidget {
   final String? hintText;
   final Widget? suffixIcon;
   final VoidCallback? onEditingComplete;
+  final bool obscureText;
 
   final TextInputType inputType;
 
@@ -24,6 +24,7 @@ class CommonTextfield extends StatelessWidget {
     this.focusNode,
     this.hintText,
     this.onChanged,
+    this.obscureText = false,
     this.suffixIcon,
     this.inputType = TextInputType.text,
     this.validator,
@@ -48,6 +49,8 @@ class CommonTextfield extends StatelessWidget {
           keyboardType: inputType,
           validator: validator,
           onChanged: onChanged,
+          maxLines: 1,
+          obscureText: obscureText,
           onEditingComplete: onEditingComplete,
           onTapOutside: (event) =>
               FocusManager.instance.primaryFocus?.unfocus(),

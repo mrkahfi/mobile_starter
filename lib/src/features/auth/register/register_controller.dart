@@ -1,8 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:formz/formz.dart';
-import 'package:zot_starter/src/commons/data/datasource/remote/config/result.dart';
 import 'package:zot_starter/src/commons/data/repositories/auth_repository.dart';
-import 'package:zot_starter/src/commons/domain/entities/user.dart';
 import 'package:zot_starter/src/commons/domain/formz/formz.dart';
 import 'package:zot_starter/src/features/auth/register/register_state.dart';
 
@@ -51,24 +49,26 @@ class RegisterController extends StateNotifier<RegisterState> {
     );
   }
 
-  Future<void> submit(String email, String password) async {
+  Future<void> submit(
+    String email,
+    String password,
+    String password2,
+  ) async {
     state = state.copyWith(value: const AsyncValue.loading());
-    await AsyncValue.guard(() async {
-      final response = await _authenticate(email, password);
-      response.when(
-        success: (data) => state = state.copyWith(
-          value: AsyncValue.data(data),
-          status: FormzStatus.submissionSuccess,
-        ),
-        failure: (error, stackTrace) => state = state.copyWith(
-          status: FormzStatus.submissionFailure,
-        ),
-      );
-    });
-  }
 
-  Future<Result<User>> _authenticate(String email, String password) async =>
-      ref.read(authRepositoryProvider).login(email, password);
+    final response = await ref
+        .read(authRepositoryProvider)
+        .register(email, password, password2);
+    response.when(
+      success: (data) => state = state.copyWith(
+        value: AsyncValue.data(data),
+        status: FormzStatus.submissionSuccess,
+      ),
+      failure: (error, stackTrace) => state = state.copyWith(
+        status: FormzStatus.submissionFailure,
+      ),
+    );
+  }
 }
 
 final registerControllerProvider =

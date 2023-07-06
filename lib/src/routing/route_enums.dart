@@ -21,7 +21,7 @@ enum MainTabRoute {
   ;
 
   String get path {
-    return '/${name.toKebabCase}';
+    return '${Routes.main.path}/${name.toKebabCase}';
   }
 
   Widget get icon {
@@ -39,7 +39,5 @@ enum MainTabRoute {
     }
   }
 
-  String get label {
-    return name.toUpperCase();
-  }
+  String get label => name.toUpperCase();
 }

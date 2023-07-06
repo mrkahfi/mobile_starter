@@ -100,6 +100,7 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
           controller: _passwordEditingController,
           hintText: tr(LocaleKeys.password),
           label: LocaleKeys.password.tr(),
+          obscureText: true,
           onChanged: (value) =>
               ref.read(loginControllerProvider.notifier).updatePassword(value),
           validator: (value) => passwordForm.error?.message,
@@ -131,9 +132,7 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
               borderRadiusType: ZeroButtonRadiusType.curved,
               size: ZeroButtonSize.large,
               icon: const Icon(Icons.fingerprint),
-              style: const ZeroButtonIconStyle(
-                iconSize: 24,
-              ),
+              style: const ZeroButtonIconStyle(iconSize: 24),
               onPressed: () {},
             ),
           ],
@@ -144,7 +143,7 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
 
   void _listenAuth(BuildContext context) {
     ref.listen(loginControllerProvider, (previous, next) {
-      final justAuthenticated = previous == null && next.value.hasValue;
+      final justAuthenticated = next.status == FormzStatus.submissionSuccess;
 
       if (justAuthenticated) {
         context.goNamed(Routes.main.name);

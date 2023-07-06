@@ -1,21 +1,21 @@
 part of '../routes.dart';
 
-final initRoutesProvider = Provider(
+final _authRoutesProvider = Provider(
   (ref) => ShellRoute(
-    navigatorKey: _initNavigatorKey,
+    navigatorKey: _authNavigatorKey,
     builder: (context, state, child) => child,
     routes: [
       GoRoute(
-        path: Routes.onboarding.path,
-        name: Routes.onboarding.name,
+        path: Routes.login.path,
+        name: Routes.login.name,
         builder: (BuildContext context, GoRouterState state) =>
-            const OnboardingScreen(),
+            const LoginScreen(),
       ),
       GoRoute(
-        path: Routes.splash.path,
-        name: Routes.splash.name,
+        path: Routes.register.path,
+        name: Routes.register.name,
         builder: (BuildContext context, GoRouterState state) =>
-            const SplashScreen(),
+            const RegisterScreen(),
       )
     ],
   ),

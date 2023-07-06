@@ -1,18 +1,26 @@
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:zot_starter/gen/assets.gen.dart';
 import 'package:zot_starter/src/commons/data/datasource/sources.dart';
+import 'package:zot_starter/src/commons/data/mappers/user_mapper.dart';
+import 'package:zot_starter/src/commons/data/models/responses/user_response.dart';
 import 'package:zot_starter/src/commons/domain/entities/user.dart';
 import 'package:zot_starter/src/utils/delay.dart';
-import 'package:zot_starter/src/utils/in_memory_store.dart';
 
 class AuthRepository {
-  AuthRepository(this.authApi, {InMemoryStore<User?>? authState})
-      : _authState = authState ?? InMemoryStore<User?>(null);
+  AuthRepository(
+    this.authApi, {
+    required this.hiveService,
+  });
 
   final AuthApi authApi;
-  final InMemoryStore<User?> _authState;
+  final HiveService hiveService;
 
-  Stream<User?> authStateChanges() => _authState.stream;
-  User? get currentUser => _authState.value;
+  User? get currentUser => hiveService.getCurrentUser();
+
+  Future<String?> get userToken => hiveService.getUserToken();
 
   Future<Result<User>> login(
     String email,
@@ -20,13 +28,15 @@ class AuthRepository {
   ) async {
     try {
       // final user = await authApi.login();
-      await delay();
-      final user = User(
-        uid: email.split('').reversed.join(),
-        email: email,
-      );
+      // final response = UserResponse();
+      final json = await rootBundle.loadString(Assets.jsons.user);
+      final response =
+          UserResponse.fromJson(jsonDecode(json) as Map<String, dynamic>);
 
-      _authState.value = user;
+      final user = UserMapper.mapUserResponseToUser(response);
+
+      hiveService.saveCurrentUser(user);
+      await hiveService.saveUserToken(response.token);
       return Result.success(user);
     } on Exception catch (e, st) {
       return Result.failure(
@@ -54,7 +64,8 @@ class AuthRepository {
         email: email,
       );
 
-      _authState.value = user;
+      hiveService.saveCurrentUser(user);
+
       return Result.success(user);
     } on Exception catch (e, st) {
       return Result.failure(
@@ -69,20 +80,18 @@ class AuthRepository {
     }
   }
 
-  Future<void> logout() async {
-    _authState.value = null;
-  }
+  Future<void> logout() async => hiveService
+    ..deleteCurrentUser()
+    ..deleteUserToken();
 
-  void dispose() => _authState.close();
+  void dispose() => hiveService;
 }
 
 final authRepositoryProvider = Provider<AuthRepository>((ref) {
-  final auth = AuthRepository(ref.watch(authApiProvider));
+  final auth = AuthRepository(
+    ref.watch(authApiProvider),
+    hiveService: ref.watch(hiveServiceProvider),
+  );
   ref.onDispose(auth.dispose);
   return auth;
-});
-
-final authStateChangesProvider = StreamProvider<User?>((ref) {
-  final authRepository = ref.watch(authRepositoryProvider);
-  return authRepository.authStateChanges();
 });

@@ -6,6 +6,7 @@ import 'package:zot_starter/src/app/themes/foundation/typography.dart';
 
 class AppTheme {
   static final ZeroThemeData light = ZeroThemeData(
+    scaffoldBackgroundColor: Colors.white,
     primaryColor: LightColors.primaryColor.toAccentColor(),
     brightness: Brightness.light,
     typography: const AppTypography(
@@ -16,6 +17,7 @@ class AppTheme {
   );
 
   static final ZeroThemeData dark = ZeroThemeData(
+    scaffoldBackgroundColor: Colors.black,
     primaryColor: DarkColors.primaryColor.toAccentColor(),
     brightness: Brightness.dark,
     typography: const AppTypography(

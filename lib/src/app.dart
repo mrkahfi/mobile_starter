@@ -16,6 +16,7 @@ class MyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final routers = ref.watch(goRouterProvider);
+
     ref.listen<Uri?>(
       dynamicLinkNotifierProvider,
       (prevUri, currentUri) => handleDeepLink(ref, routers, currentUri),

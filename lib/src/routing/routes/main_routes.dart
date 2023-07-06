@@ -2,7 +2,6 @@ part of '../routes.dart';
 
 final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
   final authService = ref.watch(authServiceProvider);
-
   return ShellRoute(
     navigatorKey: _mainTabNavigatorKey,
     pageBuilder: (context, state, child) {
@@ -18,10 +17,6 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
         path: Routes.main.path,
         name: Routes.main.name,
         parentNavigatorKey: _mainTabNavigatorKey,
-        redirect: (context, state) =>
-            authService.authStatus == AuthStatus.unauthenticated
-                ? Routes.login.path
-                : null,
         pageBuilder: (BuildContext context, GoRouterState state) =>
             const NoTransitionPage(child: HomeScreen()),
       ),
@@ -34,6 +29,7 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
       GoRoute(
         path: MainTabRoute.tab2.path,
         parentNavigatorKey: _mainTabNavigatorKey,
+        builder: (context, state) => const LoginScreen(),
         pageBuilder: (BuildContext context, GoRouterState state) =>
             NoTransitionPage(
           child: ContentScreen(title: MainTabRoute.tab2.label),
@@ -58,10 +54,18 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
       GoRoute(
         path: MainTabRoute.tab5.path,
         parentNavigatorKey: _mainTabNavigatorKey,
+        redirect: (context, state) async {
+          // TODO(mrkahfi): make redirection popable
+          final status = await authService.authStatus;
+          return status == AuthStatus.unauthenticated
+              ? Routes.login.subPath
+              : null;
+        },
         pageBuilder: (BuildContext context, GoRouterState state) =>
             NoTransitionPage(
           child: ContentScreen(
             title: MainTabRoute.tab5.label,
+            content: const LogoutButton(),
           ),
         ),
       ),

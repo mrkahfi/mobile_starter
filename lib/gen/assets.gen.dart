@@ -46,8 +46,11 @@ class $AssetsJsonsGen {
   /// File path: assets/jsons/example.json
   String get example => 'assets/jsons/example.json';
 
+  /// File path: assets/jsons/user.json
+  String get user => 'assets/jsons/user.json';
+
   /// List of all assets
-  List<String> get values => [example];
+  List<String> get values => [example, user];
 }
 
 class $AssetsTranslationsGen {
