@@ -1,5 +1,5 @@
-import 'package:zot_starter/src/commons/data/models/responses/item_response.dart';
-import 'package:zot_starter/src/commons/domain/entities/item.dart';
+import 'package:app_baru/src/commons/data/models/responses/item_response.dart';
+import 'package:app_baru/src/commons/domain/entities/item.dart';
 
 /// Mapper is a class responsible to map raw objects retrieved from the API
 /// to models acccording to UI needs

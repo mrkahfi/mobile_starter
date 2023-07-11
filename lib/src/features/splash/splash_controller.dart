@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/commons/services/app_service.dart';
-import 'package:zot_starter/src/features/splash/splash_state.dart';
+import 'package:app_baru/src/commons/services/app_service.dart';
+import 'package:app_baru/src/features/splash/splash_state.dart';
 
 class SplashController extends StateNotifier<SplashState> {
   SplashController(this.ref) : super(const SplashState());

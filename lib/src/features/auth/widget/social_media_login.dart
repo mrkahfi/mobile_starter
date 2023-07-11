@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zog_ui/zog_ui.dart' hide Assets;
-import 'package:zot_starter/gen/assets.gen.dart';
-import 'package:zot_starter/src/app/themes/foundation/sizes.dart';
+import 'package:app_baru/gen/assets.gen.dart';
+import 'package:app_baru/src/app/themes/foundation/sizes.dart';
 
 class LoginSocialMediaSection extends StatelessWidget {
   const LoginSocialMediaSection({

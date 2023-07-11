@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zog_ui/components/button/zero_button.dart';
-import 'package:zot_starter/src/features/auth/logout/logout_controller.dart';
-import 'package:zot_starter/src/routing/routes.dart';
+import 'package:app_baru/src/features/auth/logout/logout_controller.dart';
+import 'package:app_baru/src/routing/routes.dart';
 
 class LogoutButton extends ConsumerWidget {
   const LogoutButton({super.key});

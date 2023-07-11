@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:zot_starter/src/app/themes/foundation/sizes.dart';
-import 'package:zot_starter/src/utils/extensions/theme_extension.dart';
+import 'package:app_baru/src/app/themes/foundation/sizes.dart';
+import 'package:app_baru/src/utils/extensions/theme_extension.dart';
 
 class WelcomePageItem extends StatelessWidget {
   const WelcomePageItem({

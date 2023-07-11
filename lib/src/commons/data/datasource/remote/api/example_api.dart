@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/commons/data/datasource/remote/config/dio_client.dart';
-import 'package:zot_starter/src/commons/data/datasource/sources.dart';
-import 'package:zot_starter/src/commons/data/models/responses/item_response.dart';
+import 'package:app_baru/src/commons/data/datasource/remote/config/dio_client.dart';
+import 'package:app_baru/src/commons/data/datasource/sources.dart';
+import 'package:app_baru/src/commons/data/models/responses/item_response.dart';
 
 class ExampleApi {
   const ExampleApi(this._dioClient);

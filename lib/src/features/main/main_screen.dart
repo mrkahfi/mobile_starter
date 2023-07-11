@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zog_ui/zog_ui.dart';
-import 'package:zot_starter/src/features/main/main_controller.dart';
-import 'package:zot_starter/src/routing/routes.dart';
+import 'package:app_baru/src/features/main/main_controller.dart';
+import 'package:app_baru/src/routing/routes.dart';
 
 /// Screen that contains the bottom navigation bar along with the children tabs
 class MainScreen extends ConsumerWidget {

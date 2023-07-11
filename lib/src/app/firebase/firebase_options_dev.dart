@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyC1u-iJnEsl4gY8Knm3A9DSbrBkAHr_Q6A',
-    appId: '1:948419051365:android:89d6e1014aad59da2aeb8c',
+    appId: '1:948419051365:android:afadf970b4ac9d842aeb8c',
     messagingSenderId: '948419051365',
     projectId: 'zot-starter-dev',
     storageBucket: 'zot-starter-dev.appspot.com',
@@ -59,11 +59,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAMt18PudSZxYVrd3ps-71ZU0qa50Py46g',
-    appId: '1:948419051365:ios:b2013e63724fc68b2aeb8c',
+    appId: '1:948419051365:ios:d6f1d67ca4cd1bc72aeb8c',
     messagingSenderId: '948419051365',
     projectId: 'zot-starter-dev',
     storageBucket: 'zot-starter-dev.appspot.com',
-    iosClientId: '948419051365-b6tkb23kdhana4hadlsfltt1h72e9545.apps.googleusercontent.com',
-    iosBundleId: 'com.zot-starter.mobile.dev',
+    iosClientId: '948419051365-4ruj9eh8lq2urm5508h7luc45od94goo.apps.googleusercontent.com',
+    iosBundleId: 'com.appbaru.mobile.dev',
   );
 }

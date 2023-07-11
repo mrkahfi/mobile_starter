@@ -2,12 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/gen/assets.gen.dart';
-import 'package:zot_starter/src/commons/data/datasource/sources.dart';
-import 'package:zot_starter/src/commons/data/mappers/user_mapper.dart';
-import 'package:zot_starter/src/commons/data/models/responses/user_response.dart';
-import 'package:zot_starter/src/commons/domain/entities/user.dart';
-import 'package:zot_starter/src/utils/delay.dart';
+import 'package:app_baru/gen/assets.gen.dart';
+import 'package:app_baru/src/commons/data/datasource/sources.dart';
+import 'package:app_baru/src/commons/data/mappers/user_mapper.dart';
+import 'package:app_baru/src/commons/data/models/responses/user_response.dart';
+import 'package:app_baru/src/commons/domain/entities/user.dart';
+import 'package:app_baru/src/utils/delay.dart';
 
 class AuthRepository {
   AuthRepository(

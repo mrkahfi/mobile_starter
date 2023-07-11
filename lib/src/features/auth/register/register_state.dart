@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:formz/formz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:zot_starter/src/commons/domain/entities/user.dart';
-import 'package:zot_starter/src/commons/domain/formz/formz.dart';
+import 'package:app_baru/src/commons/domain/entities/user.dart';
+import 'package:app_baru/src/commons/domain/formz/formz.dart';
 
 part 'register_state.freezed.dart';
 

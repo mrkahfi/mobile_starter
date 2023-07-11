@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/commons/services/auth_service.dart';
-import 'package:zot_starter/src/features/auth/logout/logout_state.dart';
+import 'package:app_baru/src/commons/services/auth_service.dart';
+import 'package:app_baru/src/features/auth/logout/logout_state.dart';
 
 class LogoutController extends StateNotifier<LogoutState> {
   LogoutController(this.ref) : super(const LogoutState());

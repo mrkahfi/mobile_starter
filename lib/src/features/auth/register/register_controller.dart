@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:formz/formz.dart';
-import 'package:zot_starter/src/commons/data/repositories/auth_repository.dart';
-import 'package:zot_starter/src/commons/domain/formz/formz.dart';
-import 'package:zot_starter/src/features/auth/register/register_state.dart';
+import 'package:app_baru/src/commons/data/repositories/auth_repository.dart';
+import 'package:app_baru/src/commons/domain/formz/formz.dart';
+import 'package:app_baru/src/features/auth/register/register_state.dart';
 
 class RegisterController extends StateNotifier<RegisterState> {
   RegisterController(this.ref) : super(const RegisterState());

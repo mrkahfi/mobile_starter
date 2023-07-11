@@ -1,9 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:zot_starter/src/app/config/flavor_config.dart';
-import 'package:zot_starter/src/app/firebase/firebase_options.dart';
-import 'package:zot_starter/src/app/firebase/firebase_options_dev.dart'
+import 'package:app_baru/src/app/config/flavor_config.dart';
+import 'package:app_baru/src/app/firebase/firebase_options.dart';
+import 'package:app_baru/src/app/firebase/firebase_options_dev.dart'
     as dev;
-import 'package:zot_starter/src/app/firebase/firebase_options_stg.dart'
+import 'package:app_baru/src/app/firebase/firebase_options_stg.dart'
     as stg;
 
 /// A config that serves as a source of configuration
@@ -35,18 +35,18 @@ import 'package:zot_starter/src/app/firebase/firebase_options_stg.dart'
 class AppConfig {
   const AppConfig._();
 
-  /// ZOT Mobile Starter
+  /// App baru
   static const appName = FlavorConfig<String>(
-    dev: 'ZOT Mobile Starter',
-    stg: 'ZOT Mobile Starter',
-    prod: 'ZOT Mobile Starter',
+    dev: '[DEV] App baru',
+    stg: '[STG] App baru',
+    prod: 'App baru',
   );
 
-  /// ZOT Mobile Starter for Firebase Options
+  /// App baru for Firebase Options
   static const firebaseAppName = FlavorConfig<String>(
-    dev: 'Devzot_starter',
-    stg: 'Stgzot_starter',
-    prod: 'zot_starter',
+    dev: 'Devapp_baru',
+    stg: 'Stgapp_baru',
+    prod: 'app_baru',
   );
 
   /// App Banner Name

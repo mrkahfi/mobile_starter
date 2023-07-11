@@ -58,7 +58,7 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
           // TODO(mrkahfi): make redirection popable
           final status = await authService.authStatus;
           return status == AuthStatus.unauthenticated
-              ? Routes.login.subPath
+              ? Routes.login.path
               : null;
         },
         pageBuilder: (BuildContext context, GoRouterState state) =>

@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>276303003139-7nnp0ele9ubsgo36qpfg1ds4idaf7vjb.apps.googleusercontent.com</string>
+	<string>276303003139-6h7fh82869349oabdcj0jcigepohr80u.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.276303003139-7nnp0ele9ubsgo36qpfg1ds4idaf7vjb</string>
+	<string>com.googleusercontent.apps.276303003139-6h7fh82869349oabdcj0jcigepohr80u</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCFlhEU2E0Wm0Mn7vQEXtF3Pzi8UTIib2c</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.zot-starter.mobile</string>
+	<string>com.appbaru.mobile</string>
 	<key>PROJECT_ID</key>
 	<string>zot-starter-prod</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:276303003139:ios:d7d64c7292eb6f711cd836</string>
+	<string>1:276303003139:ios:a331e57802fd34031cd836</string>
 </dict>
 </plist>

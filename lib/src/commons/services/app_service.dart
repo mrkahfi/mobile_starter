@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/commons/data/datasource/local/hive_service.dart';
+import 'package:app_baru/src/commons/data/datasource/local/hive_service.dart';
 
 class AppService with ChangeNotifier {
   AppService(this.ref);

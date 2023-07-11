@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:zog_ui/zog_ui.dart';
-import 'package:zot_starter/src/app/config/config.dart';
-import 'package:zot_starter/src/app/constants/constants.dart';
-import 'package:zot_starter/src/app/themes/app_theme.dart';
-import 'package:zot_starter/src/features/main/main_controller.dart';
-import 'package:zot_starter/src/routing/routes.dart';
-import 'package:zot_starter/src/utils/dynamic_link/dynamic_link_notifier.dart';
+import 'package:app_baru/src/app/config/config.dart';
+import 'package:app_baru/src/app/constants/constants.dart';
+import 'package:app_baru/src/app/themes/app_theme.dart';
+import 'package:app_baru/src/features/main/main_controller.dart';
+import 'package:app_baru/src/routing/routes.dart';
+import 'package:app_baru/src/utils/dynamic_link/dynamic_link_notifier.dart';
 
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});

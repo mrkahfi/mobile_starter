@@ -25,7 +25,7 @@ class CommonButton extends StatelessWidget {
       height: height,
       child: ZeroButton.primary(
         style: ZeroButtonStyle(
-          fixedSize: Size(MediaQuery.of(context).size.width - 40, height),
+          maximumSize: Size(MediaQuery.of(context).size.width - 40, height),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),

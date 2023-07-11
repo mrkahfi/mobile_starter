@@ -2,15 +2,15 @@
   "applinks": {
       "details": [
       {
-        "appID": "appleTeamId.com.zot-starter.mobile.dev",
+        "appID": "appleTeamId.com.appbaru.mobile.dev",
         "paths": ["*"]
       },
       {
-        "appID": "appleTeamId.com.zot-starter.mobile.stg",
+        "appID": "appleTeamId.com.appbaru.mobile.stg",
         "paths": ["*"]
       },
       {
-        "appID": "appleTeamId.com.zot-starter.mobile",
+        "appID": "appleTeamId.com.appbaru.mobile",
         "paths": ["*"]
       }
     ]

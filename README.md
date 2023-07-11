@@ -1,4 +1,4 @@
-# ZOT Mobile Starter
+# App baru
 
 [![platform](https://img.shields.io/badge/platform-Flutter-blue.svg)](https://flutter.dev/)
 
@@ -55,29 +55,29 @@ Before getting into development, please learn our [Development Handbook](doc/han
     │   │   ├── stg                             
     │   │   │   ├── GoogleServices-info.plist        
     ├── lib                             
-    │   ├── gen                         # All generated codes go here
-    │   └── src                         # All the source code here
+    │   ├── gen                             # All generated codes go here
+    │   └── src                             # All the source code here
     │   │   ├── app                                 
-    │   │   │   ├── config              # Flavor and app config    
-    │   │   │   ├── firebase            # Store Firebase options       
-    │   │   │   ├── theme               # App theme, typography, colors, etc
-    │   │   ├── common_widgets          # Widgets used in many places accross the app.
-    │   │   ├── constants               # Constants, extras keys, etc,
+    │   │   │   ├── config                  # Flavor and app config    
+    │   │   │   ├── firebase                # Store Firebase options       
+    │   │   │   ├── theme                   # App theme, typography, colors, etc
+    │   │   ├── commons
+    │   │   │   │   ├── services            # Feature service and domain mapper goes here
+    │   │   │   │   ├── data                # DTO, request and response objects, and repositories
+    │   │   |   |   |   ├── services        # Local and remote data handling service
+    │   │   |   |   |   ├── models          # Local and remote data handling service
+    │   │   |   |   |   ├── repositories
+    │   │   │   │   ├── domain              # UI Entity objects, enums, etc
+    │   │   │   │   ├── widgets             # Widgets used in many places accross the app.
+    │   │   ├── constants                   # Constants, extras keys, etc,
     │   │   ├── features                         
-    │   │   │   ├── auth  
-    │   │   │   │   ├── application     # Feature service and domain mapper goes here
-    │   │   │   │   ├── data            # DTO, request and response objects, and repositories
-    │   │   │   │   ├── domain          # UI Entity objects
-    │   │   │   │   ├── presentation    # UI and the controllers and states                    
-    │   │   │   ├── main  
-    │   │   │   │   ├── application  
-    │   │   │   │   ├── data  
-    │   │   │   │   ├── domain  
-    │   │   │   │   ├── presentation                    
-    │   │   ├── localization            # Generated CodeGen loader, LocaleKeys, etc  
-    │   │   ├── routing                 # Routes using Go Router
-    │   │   ├── services                # Local and remote data handling service
-    │   │   ├── utils                   # Extensions, validators, etc.
+    │   │   │   ├── auth                    # Every features has UI, controllers, and states
+    │   │   │   ├── main               
+    │   │   │   ├── onboarding         
+    │   │   │   ├── splash                    
+    │   │   ├── localization                # Generated CodeGen loader, LocaleKeys, etc  
+    │   │   ├── routing                     # Routes using Go Router
+    │   │   ├── utils                       # Extensions, validators, etc.
     └── test                            
 
 
@@ -128,7 +128,7 @@ keytool -list -v -keystore <path_to_your_keystore_file>
 ### iOS Setup
 
 1. Open [apple-app-site-association](./ios/apple-app-site-association) file
-2. Make sure the `appID` match your `.com.zot-starter.mobile`.
+2. Make sure the `appID` match your `.com.appbaru.mobile`.
 3. Upload the file [apple-app-site-association](./ios/apple-app-site-association)  to your public directory of your website, under directory `[yourwebsite.com]/.wellknown/`, so it would be acccessible as `[yourwebsite.com]/.wellknown/apple-app-site-association`
 
 

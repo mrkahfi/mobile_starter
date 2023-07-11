@@ -2,13 +2,13 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/commons/data/datasource/remote/api/example_api.dart';
-import 'package:zot_starter/src/commons/data/datasource/remote/config/config.dart';
-import 'package:zot_starter/src/commons/data/mappers/item_mapper.dart';
-import 'package:zot_starter/src/commons/data/models/responses/example_response.dart';
-import 'package:zot_starter/src/commons/data/models/responses/item_response.dart';
-import 'package:zot_starter/src/commons/domain/entities/item.dart';
-import 'package:zot_starter/src/utils/delay.dart';
+import 'package:app_baru/src/commons/data/datasource/remote/api/example_api.dart';
+import 'package:app_baru/src/commons/data/datasource/remote/config/config.dart';
+import 'package:app_baru/src/commons/data/mappers/item_mapper.dart';
+import 'package:app_baru/src/commons/data/models/responses/example_response.dart';
+import 'package:app_baru/src/commons/data/models/responses/item_response.dart';
+import 'package:app_baru/src/commons/domain/entities/item.dart';
+import 'package:app_baru/src/utils/delay.dart';
 
 class ExampleRepository {
   ExampleRepository(this.exampleApi);

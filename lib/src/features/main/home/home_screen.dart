@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zog_ui/zog_ui.dart';
-import 'package:zot_starter/src/features/main/home/home_controller.dart';
-import 'package:zot_starter/src/features/main/home/widgets/some_widget.dart';
-import 'package:zot_starter/src/routing/routes.dart';
-import 'package:zot_starter/src/utils/extensions/num_extension.dart';
-import 'package:zot_starter/src/utils/extensions/widget_extension.dart';
+import 'package:app_baru/src/features/main/home/home_controller.dart';
+import 'package:app_baru/src/features/main/home/widgets/some_widget.dart';
+import 'package:app_baru/src/routing/routes.dart';
+import 'package:app_baru/src/utils/extensions/num_extension.dart';
+import 'package:app_baru/src/utils/extensions/widget_extension.dart';
 
 // Any widget or screen having more than 200 lines of code is to be splitted
 // into multiple parts

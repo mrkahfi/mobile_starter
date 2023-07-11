@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:formz/formz.dart';
-import 'package:zot_starter/src/commons/domain/formz/formz.dart';
-import 'package:zot_starter/src/commons/services/auth_service.dart';
-import 'package:zot_starter/src/features/auth/login/login_state.dart';
+import 'package:app_baru/src/commons/domain/formz/formz.dart';
+import 'package:app_baru/src/commons/services/auth_service.dart';
+import 'package:app_baru/src/features/auth/login/login_state.dart';
 
 class LoginController extends StateNotifier<LoginState> {
   LoginController(this.ref) : super(const LoginState());

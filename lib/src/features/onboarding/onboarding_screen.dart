@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:zog_ui/zog_ui.dart';
-import 'package:zot_starter/src/app/themes/foundation/sizes.dart';
-import 'package:zot_starter/src/commons/services/app_service.dart';
-import 'package:zot_starter/src/commons/ui_components/button.dart';
-import 'package:zot_starter/src/features/onboarding/widgets/onboarding_item.dart';
-import 'package:zot_starter/src/routing/routes.dart';
-import 'package:zot_starter/src/utils/extensions/build_context_extension/theme_colors.dart';
+import 'package:app_baru/src/app/themes/foundation/sizes.dart';
+import 'package:app_baru/src/commons/services/app_service.dart';
+import 'package:app_baru/src/commons/ui_components/button.dart';
+import 'package:app_baru/src/features/onboarding/widgets/onboarding_item.dart';
+import 'package:app_baru/src/routing/routes.dart';
+import 'package:app_baru/src/utils/extensions/build_context_extension/theme_colors.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
   const OnboardingScreen({super.key});
@@ -74,17 +74,26 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                   WelcomePageItem(
                     title: items[0].title,
                     content: items[0].content,
-                    icon: const Icon(Icons.shopping_bag),
+                    icon: const Icon(
+                      Icons.shopping_bag,
+                      size: 150,
+                    ),
                   ),
                   WelcomePageItem(
                     title: items[1].title,
                     content: items[1].content,
-                    icon: const Icon(Icons.shopping_bag),
+                    icon: const Icon(
+                      Icons.shopping_bag,
+                      size: 150,
+                    ),
                   ),
                   WelcomePageItem(
                     title: items[1].title,
                     content: items[1].content,
-                    icon: const Icon(Icons.shopping_bag),
+                    icon: const Icon(
+                      Icons.shopping_bag,
+                      size: 150,
+                    ),
                   ),
                 ],
               ),
@@ -98,7 +107,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                   effect: WormEffect(
                     spacing: AppSizes.h16,
                     dotColor: context.onSecondary,
-                    activeDotColor: context.secondary,
+                    activeDotColor: context.onPrimary,
                   ),
                 ),
                 Gap.h20,
@@ -107,7 +116,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     'Start',
                     onPressed: () {
                       ref.read(appServiceProvider).onboarded = true;
-                      context.goNamed(Routes.login.name);
+                      context.goNamed(Routes.main.name);
                     },
                   )
                 else

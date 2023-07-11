@@ -7,6 +7,42 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:4f4b6d8404bf49771cd836",
+        "android_client_info": {
+          "package_name": "com.appbaru.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-6h7fh82869349oabdcj0jcigepohr80u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appbaru.mobile"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:276303003139:android:bafa4acb9bf9d8491cd836",
         "android_client_info": {
           "package_name": "com.zot_starter.mobile"
@@ -31,10 +67,10 @@
               "client_type": 3
             },
             {
-              "client_id": "276303003139-7nnp0ele9ubsgo36qpfg1ds4idaf7vjb.apps.googleusercontent.com",
+              "client_id": "276303003139-6h7fh82869349oabdcj0jcigepohr80u.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.zot-starter.mobile"
+                "bundle_id": "com.appbaru.mobile"
               }
             }
           ]

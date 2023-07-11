@@ -13,21 +13,21 @@ $ flutter run # please note that there must be 1 Emulator listed and run
 
 **_Flavors_** in Android are used to create different app versions. It can be free or paid, etc. This enables us to create multiple variants of the app using the same code base. In iOS, this is called as **_Scheme_**.
 
-In ZOT Mobile Starter, flavors are divided by its development environments. So it can be either development, staging (UAT), or production. Each of these flavor produces different binary variants with different Application IDs (for Android) or Bundle IDs (for iOS).
+In App baru, flavors are divided by its development environments. So it can be either development, staging (UAT), or production. Each of these flavor produces different binary variants with different Application IDs (for Android) or Bundle IDs (for iOS).
 
 The purpose of this separation is to make it easier to testers, product managers, or stakeholders to test the app with fully isolated environment and in order for them not to get confused on which environment of the app the are currently on.
 
 For Android, we use application IDs:
 
-1. `com.zot_starter.mobile.dev` for development
-2. `com.zot_starter.mobile.stg` for staging (UAT)
-3. `com.zot_starter.mobile` for production
+1. `com.appbaru.mobile.dev` for development
+2. `com.appbaru.mobile.stg` for staging (UAT)
+3. `com.appbaru.mobile` for production
 
 As for iOS, we use Bundle IDs:
 
-1. `com.zot-starter.mobile.dev` for development
-2. `com.zot-starter.mobile.stg` for staging (UAT)
-3. `com.zot-starter.mobile` for production
+1. `com.appbaru.mobile.dev` for development
+2. `com.appbaru.mobile.stg` for staging (UAT)
+3. `com.appbaru.mobile` for production
 
 Or if you want to target a specific flavor.
 
@@ -230,7 +230,7 @@ This folder is located in `lib/src/app/firebase`. This consists of 3 different f
 This app incorporates Firebase under the hood to handle some key functionalities such as authentication, push notifications, crash reporting, and analytics.
 
 Since it separates its environment, the Firebase projects configured for it are separated as well. This is a general best practice to avoid mixing resources between environment that leads to confuses in addressing issues.
-The following diagram shows how ZOT Mobile Starter's development environments related with the Firebase projects.
+The following diagram shows how App baru's development environments related with the Firebase projects.
 
 ![](https://i.ibb.co/72SNsSR/Screen-Shot-2022-11-25-at-12-26-37.png)
 
@@ -247,7 +247,7 @@ While the flavor for production is already available, the Firebase project for p
 
 Before you deploy the app to production, you need to have the Firebase project for it set up.
 
-**Step 1.** Go to [https://console.firebase.google.com/](https://console.firebase.google.com/) Create a new Firebase project. It's best to name it "ZOT Mobile Starter-Prod" to indicate that it's production mode and to distingue it from the rest of the projects.
+**Step 1.** Go to [https://console.firebase.google.com/](https://console.firebase.google.com/) Create a new Firebase project. It's best to name it "App baru-Prod" to indicate that it's production mode and to distingue it from the rest of the projects.
 
 **Step 2.** Go to terminal in you root of mobile directory (`apps/mobile`), run the following command to login using your Firebase account:
 
@@ -261,8 +261,8 @@ $ flutterfire login
 # Configure Firebase project for development environment
 flutterfire config  \
       --project=zot-starter-dev  \
-      --ios-bundle-id=com.zot-starter.mobile.dev \
-      --android-package-name=com.zot_starter.mobile.dev \
+      --ios-bundle-id=com.appbaru.mobile.dev \
+      --android-package-name=com.appbaru.mobile.dev \
       --ios-out=ios/config/dev/GoogleService-Info.plist \
       --out=lib/src/app/firebase/firebase_options_dev.dart
 ```
@@ -271,8 +271,8 @@ flutterfire config  \
 # Configure Firebase project for staging environment
 flutterfire config  \
       --project=zot-starter-stg \
-      --ios-bundle-id=com.zot-starter.mobile.stg \
-      --android-package-name=com.zot_starter.mobile.stg \
+      --ios-bundle-id=com.appbaru.mobile.stg \
+      --android-package-name=com.appbaru.mobile.stg \
       --ios-out=ios/config/stg/GoogleService-Info.plist \
       --out=lib/src/app/firebase/firebase_options_stg.dart
 ```
@@ -281,9 +281,9 @@ flutterfire config  \
 # Configure Firebase project for production environment
 flutterfire config \
       --project=zot-starter-prod  \
-      --ios-bundle-id=com.zot-starter.mobile \
+      --ios-bundle-id=com.appbaru.mobile \
       --ios-out=ios/config/prod/GoogleService-Info.plist \
-      --android-package-name=com.zot_starter.mobile \
+      --android-package-name=com.appbaru.mobile \
       --out=lib/src/app/firebase/firebase_options_stg.dart
 ```
 
@@ -414,7 +414,7 @@ For pre-production testing, we use Apple TestFlight. Another option is to use Ad
 
 Here are some steps to publish the app to TestFlight.
 
-**Step 0.** Open file `ios/Runner.xcworkspace` to open the ZOT Mobile Starter project in XCode.
+**Step 0.** Open file `ios/Runner.xcworkspace` to open the App baru project in XCode.
 
 **Step 1.** in XCode, select the scheme you want to publish, whether it is dev, stg, or prod. Make sure "Any iOS devices" is selected too.
 
@@ -428,7 +428,7 @@ Here are some steps to publish the app to TestFlight.
 
 **Step 5**. Upload.
 
-**Step 6.** Login to your [AppstoreConnect](https://appstoreconnect.apple.com/). Select the app (in this case "ZOT Mobile Starter"). Go to "TestFlight" tab. It will take up to 30 minutes after upload success to get the build shown on the build list.
+**Step 6.** Login to your [AppstoreConnect](https://appstoreconnect.apple.com/). Select the app (in this case "App baru"). Go to "TestFlight" tab. It will take up to 30 minutes after upload success to get the build shown on the build list.
 
 **Step 7.** Once shown, on the build click "Manage" on "missing compliance". And then select _"None of the algirithms mentioned above"_.
 
@@ -510,7 +510,7 @@ keytool -list -v -keystore <path_to_your_keystore_file>
 ## iOS Setup
 
 1. Open [apple-app-site-association](./ios/apple-app-site-association) file
-2. Make sure the `appID` match your `.com.zot-starter.mobile`.
+2. Make sure the `appID` match your `.com.appbaru.mobile`.
 3. Upload the file [apple-app-site-association](./ios/apple-app-site-association) to your public directory of your website, under directory `[yourwebsite.com]/.wellknown/`, so it would be acccessible as `[yourwebsite.com]/.wellknown/apple-app-site-association`
 
 ## ABOUT ZOG UI

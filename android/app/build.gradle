@@ -51,7 +51,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.zot_starter.mobile"
+        applicationId "com.appbaru.mobile"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
         minSdkVersion 21
@@ -65,20 +65,20 @@ android {
     productFlavors {
         prod {
             dimension "flavor-type"
-            applicationId "com.zot_starter.mobile"
-            resValue "string", "app_name", "ZOT Mobile Starter"
+            applicationId "com.appbaru.mobile"
+            resValue "string", "app_name", "App baru"
             manifestPlaceholders.deeplinkHost = "appLink"
         }
         stg {
             dimension "flavor-type"
-            applicationId "com.zot_starter.mobile.stg"
-            resValue "string", "app_name", "[STG] ZOT Mobile Starter"
+            applicationId "com.appbaru.mobile.stg"
+            resValue "string", "app_name", "[STG] App baru"
             manifestPlaceholders.deeplinkHost = "stgAppLink"
         }
         dev {
             dimension "flavor-type"
-            applicationId "com.zot_starter.mobile.dev"
-            resValue "string", "app_name", "[DEV] ZOT Mobile Starter"
+            applicationId "com.appbaru.mobile.dev"
+            resValue "string", "app_name", "[DEV] App baru"
             manifestPlaceholders.deeplinkHost = "devAppLink"
         }
     }

@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:formz/formz.dart';
 import 'package:zog_ui/zog_ui.dart' hide Assets;
-import 'package:zot_starter/src/app/themes/foundation/sizes.dart';
-import 'package:zot_starter/src/commons/ui_components/button.dart';
-import 'package:zot_starter/src/commons/ui_components/textfield.dart';
-import 'package:zot_starter/src/features/auth/login/login_controller.dart';
-import 'package:zot_starter/src/features/auth/widget/social_media_login.dart';
-import 'package:zot_starter/src/localization/locale_keys.g.dart';
-import 'package:zot_starter/src/routing/routes.dart';
+import 'package:app_baru/src/app/themes/foundation/sizes.dart';
+import 'package:app_baru/src/commons/ui_components/button.dart';
+import 'package:app_baru/src/commons/ui_components/textfield.dart';
+import 'package:app_baru/src/features/auth/login/login_controller.dart';
+import 'package:app_baru/src/features/auth/widget/social_media_login.dart';
+import 'package:app_baru/src/localization/locale_keys.g.dart';
+import 'package:app_baru/src/routing/routes.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

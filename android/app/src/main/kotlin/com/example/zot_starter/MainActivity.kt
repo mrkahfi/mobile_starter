@@ -1,4 +1,4 @@
-package com.zot_starter.mobile
+package com.appbaru.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 

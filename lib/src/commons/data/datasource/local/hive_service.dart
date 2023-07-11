@@ -1,14 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:zot_starter/src/app/constants/constants.dart';
-import 'package:zot_starter/src/commons/data/datasource/local/secure_storage_service.dart';
-import 'package:zot_starter/src/commons/domain/entities/user.dart';
+import 'package:app_baru/src/app/constants/constants.dart';
+import 'package:app_baru/src/commons/domain/entities/user.dart';
 
 class HiveService {
-  HiveService(this.secureStorageService);
-
-  final SecureStorageService secureStorageService;
-
   final userBox = Hive.box<User>(HiveKey.userBox);
   final appInitializedBox = Hive.box<bool>(HiveKey.isInitializedBox);
   final appOnboardedBox = Hive.box<bool>(HiveKey.isOnboardedBox);
@@ -48,7 +43,4 @@ class HiveService {
   void deleteUserToken() => encryptedBox.delete(HiveKey.userToken);
 }
 
-final hiveServiceProvider = Provider<HiveService>((ref) {
-  final secureStorage = ref.watch(secureStorageProvider)..init();
-  return HiveService(secureStorage);
-});
+final hiveServiceProvider = Provider<HiveService>((ref) => HiveService());

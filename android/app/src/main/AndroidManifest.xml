@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zot_starter.mobile">
+    package="com.appbaru.mobile">
    <application
-        android:label="ZOT Mobile Starter"
+        android:label="App baru"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

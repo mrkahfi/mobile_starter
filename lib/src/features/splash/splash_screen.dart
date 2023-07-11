@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zog_ui/zog_ui.dart';
-import 'package:zot_starter/src/app/themes/foundation/sizes.dart';
-import 'package:zot_starter/src/features/splash/splash_controller.dart';
-import 'package:zot_starter/src/routing/routes.dart';
-import 'package:zot_starter/src/utils/extensions/build_context_extension/theme_colors.dart';
+import 'package:app_baru/src/app/themes/foundation/sizes.dart';
+import 'package:app_baru/src/features/splash/splash_controller.dart';
+import 'package:app_baru/src/routing/routes.dart';
+import 'package:app_baru/src/utils/extensions/build_context_extension/theme_colors.dart';
 
 /// Screen that contains the bottom navigation bar along with the children tabs
 class SplashScreen extends ConsumerWidget {

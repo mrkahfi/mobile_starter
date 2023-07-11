@@ -21,7 +21,7 @@ enum MainTabRoute {
   ;
 
   String get path {
-    return '${Routes.main.path}/${name.toKebabCase}';
+    return '/${name.toKebabCase}';
   }
 
   Widget get icon {
