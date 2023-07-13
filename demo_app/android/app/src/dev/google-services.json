@@ -1,0 +1,154 @@
+{
+  "project_info": {
+    "project_number": "948419051365",
+    "project_id": "zot-starter-dev",
+    "storage_bucket": "zot-starter-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948419051365:android:afadf970b4ac9d842aeb8c",
+        "android_client_info": {
+          "package_name": "com.appbaru.mobile.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1u-iJnEsl4gY8Knm3A9DSbrBkAHr_Q6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "948419051365-4ruj9eh8lq2urm5508h7luc45od94goo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appbaru.mobile.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948419051365:android:89e33b40d5b6fb362aeb8c",
+        "android_client_info": {
+          "package_name": "com.demoapp.android.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1u-iJnEsl4gY8Knm3A9DSbrBkAHr_Q6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "948419051365-4ruj9eh8lq2urm5508h7luc45od94goo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appbaru.mobile.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948419051365:android:2c5c2deefcf82da22aeb8c",
+        "android_client_info": {
+          "package_name": "com.demoapp.mobile.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1u-iJnEsl4gY8Knm3A9DSbrBkAHr_Q6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "948419051365-4ruj9eh8lq2urm5508h7luc45od94goo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appbaru.mobile.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948419051365:android:89d6e1014aad59da2aeb8c",
+        "android_client_info": {
+          "package_name": "com.zot_starter.mobile.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1u-iJnEsl4gY8Knm3A9DSbrBkAHr_Q6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "948419051365-4ruj9eh8lq2urm5508h7luc45od94goo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appbaru.mobile.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

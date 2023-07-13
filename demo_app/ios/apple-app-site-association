@@ -1,0 +1,18 @@
+{
+  "applinks": {
+      "details": [
+      {
+        "appID": "appleTeamId.com.demoapp.ios.dev",
+        "paths": ["*"]
+      },
+      {
+        "appID": "appleTeamId.com.demoapp.ios.stg",
+        "paths": ["*"]
+      },
+      {
+        "appID": "appleTeamId.com.demoapp.ios",
+        "paths": ["*"]
+      }
+    ]
+  }
+}
