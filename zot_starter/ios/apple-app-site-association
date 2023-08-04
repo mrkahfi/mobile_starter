@@ -1,0 +1,18 @@
+{
+  "applinks": {
+      "details": [
+      {
+        "appID": "appleTeamId.com.zot-starter.mobile.dev",
+        "paths": ["*"]
+      },
+      {
+        "appID": "appleTeamId.com.zot-starter.mobile.stg",
+        "paths": ["*"]
+      },
+      {
+        "appID": "appleTeamId.com.zot-starter.mobile",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

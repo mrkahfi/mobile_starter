@@ -1,6 +1,0 @@
-bricks:
-  new_feature:
-    path: ../../mobile_bricks/new_feature
-    # git:
-    #   url: "https://gitlab.zero-one-group.com/zo-group/software/mobile_bricks.git"
-    #   path: new_feature
