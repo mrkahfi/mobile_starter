@@ -2,14 +2,19 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+import 'package:zot_starter/src/common/data/data.dart';
+import 'package:zot_starter/src/common/data/sources/sources.dart';
+import 'package:zot_starter/src/common/domain/entities/user.dart';
 
 class SocialAuthRepository {
-  SocialAuthRepository({
+  SocialAuthRepository(
+    this.authApi, {
+    required this.hiveService,
     GoogleSignIn? googleSignin,
     FacebookAuth? facebookSignIn,
   })  : _googleSignIn = googleSignin ?? GoogleSignIn(),
@@ -17,6 +22,13 @@ class SocialAuthRepository {
 
   final GoogleSignIn _googleSignIn;
   final FacebookAuth _facebookSignIn;
+
+  final SocialAuthApi authApi;
+  final HiveService hiveService;
+
+  User? get currentUser => hiveService.currentUser;
+
+  Future<String?> get userToken => hiveService.userToken;
 
   Future<OAuthCredential> get googleOAuthCredential async {
     try {
@@ -80,7 +92,28 @@ class SocialAuthRepository {
 
     return oAuthCredential;
   }
+
+  Future<Result<User>> socialLogin(OAuthCredential credential) async {
+    try {
+      final response = await authApi.socialLogin(credential.asMap());
+
+      final user = UserMapper.mapUserResponseToUser(response);
+
+      hiveService.saveCurrentUser(user);
+      await hiveService.saveUserToken(response.token);
+      return Result.success(user);
+    } catch (e, st) {
+      return Result.failure(
+        NetworkExceptions.getException(e, st),
+        st,
+      );
+    }
+  }
 }
 
-final socialAuthRepositoryProvider =
-    Provider<SocialAuthRepository>((ref) => SocialAuthRepository());
+final socialAuthRepositoryProvider = Provider<SocialAuthRepository>(
+  (ref) => SocialAuthRepository(
+    ref.watch(socialAuthApiProvider),
+    hiveService: ref.watch(hiveServiceProvider),
+  ),
+);

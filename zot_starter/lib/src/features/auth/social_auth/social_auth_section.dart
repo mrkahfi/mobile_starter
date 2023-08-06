@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zot_starter/gen/assets.gen.dart';
 import 'package:zot_starter/src/app/themes/foundation/sizes.dart';
 import 'package:zot_starter/src/common/components/button.dart';
-import 'package:zot_starter/src/features/auth/widget/social_auth_controller.dart';
+import 'package:zot_starter/src/features/auth/social_auth/social_auth_controller.dart';
 import 'package:zot_starter/src/utils/extensions/string_extension.dart';
 
 class SocialAuthSection extends ConsumerWidget {

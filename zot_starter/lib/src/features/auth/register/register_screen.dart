@@ -6,7 +6,6 @@ import 'package:zot_starter/src/app/themes/foundation/sizes.dart';
 import 'package:zot_starter/src/common/components/button.dart';
 import 'package:zot_starter/src/common/components/textfield.dart';
 import 'package:zot_starter/src/features/auth/register/register_controller.dart';
-import 'package:zot_starter/src/features/auth/widget/social_auth_section.dart';
 import 'package:zot_starter/src/localization/locale_keys.g.dart';
 import 'package:zot_starter/src/routing/routes.dart';
 
@@ -31,7 +30,6 @@ class RegisterScreen extends StatelessWidget {
             Gap.h24,
             const RegisterInputSection(),
             Gap.h16,
-            const SocialAuthSection()
           ],
         ),
       ),

@@ -1,11 +1,12 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zot_starter/src/common/services/auth_service.dart';
-import 'package:zot_starter/src/features/auth/widget/social_auth_state.dart';
+import 'package:zot_starter/src/common/services/social_auth_service.dart';
+
+import 'package:zot_starter/src/features/auth/social_auth/social_auth_state.dart';
 
 class SocialAuthController extends StateNotifier<SocialAuthState> {
   SocialAuthController(this.authService) : super(SocialAuthState());
 
-  final AuthService authService;
+  final SocialAuthService authService;
 
   Future<void> signInWithGoogle() async {
     final result = await authService.loginWithGoogle();

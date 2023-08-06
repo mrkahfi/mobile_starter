@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zot_starter/src/common/data/mappers/user_mapper.dart';
 import 'package:zot_starter/src/common/data/models/requests/login_request.dart';
@@ -59,23 +58,6 @@ class AuthRepository {
 
       hiveService.saveCurrentUser(user);
 
-      return Result.success(user);
-    } catch (e, st) {
-      return Result.failure(
-        NetworkExceptions.getException(e, st),
-        st,
-      );
-    }
-  }
-
-  Future<Result<User>> socialLogin(OAuthCredential credential) async {
-    try {
-      final response = await authApi.socialLogin(credential.asMap());
-
-      final user = UserMapper.mapUserResponseToUser(response);
-
-      hiveService.saveCurrentUser(user);
-      await hiveService.saveUserToken(response.token);
       return Result.success(user);
     } catch (e, st) {
       return Result.failure(
