@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zot_starter/gen/assets.gen.dart';
@@ -25,13 +27,15 @@ class SocialAuthSection extends ConsumerWidget {
           onPressed: () =>
               ref.read(socialAuthController.notifier).signInWithGoogle(),
         ),
-        Gap.h16,
-        CommonButton.withIcon(
-          'Continue with Apple'.hardcoded,
-          icon: Assets.icons.appleIcon.svg(),
-          onPressed: () =>
-              ref.read(socialAuthController.notifier).signInWithApple(),
-        ),
+        if (Platform.isIOS) ...[
+          Gap.h16,
+          CommonButton.withIcon(
+            'Continue with Apple'.hardcoded,
+            icon: Assets.icons.appleIcon.svg(),
+            onPressed: () =>
+                ref.read(socialAuthController.notifier).signInWithApple(),
+          ),
+        ],
         Gap.h16,
         CommonButton.withIcon(
           'Continue with Facebook'.hardcoded,

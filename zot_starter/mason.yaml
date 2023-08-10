@@ -5,5 +5,5 @@ bricks:
     #   url: "https://gitlab.zero-one-group.com/zo-group/software/mobile_bricks.git"
     #   path: new_feature
 
-  social_auth:
+  feature_social_auth:
     path: ../../mobile_bricks/features/social_auth
