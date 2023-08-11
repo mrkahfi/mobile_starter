@@ -1,0 +1,18 @@
+{
+  "applinks": {
+      "details": [
+      {
+        "appID": "VN6ZS2V3DW.com.kahfiapp.ios.dev",
+        "paths": ["*"]
+      },
+      {
+        "appID": "VN6ZS2V3DW.com.kahfiapp.ios.stg",
+        "paths": ["*"]
+      },
+      {
+        "appID": "VN6ZS2V3DW.com.kahfiapp.ios",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

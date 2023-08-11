@@ -3,7 +3,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "androidAppId",
-      "sha256_cert_fingerprints": ["sha256"] 
+      "sha256_cert_fingerprints": ["prodSha256"] 
     }
   },
   {
