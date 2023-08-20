@@ -32,7 +32,7 @@ final _authNavigatorKey = GlobalKey<NavigatorState>();
 
 final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
   final appService = ref.watch(appServiceProvider);
-  final authService = ref.watch(authServiceProvider);
+  final authService = ref.watch(authStateProvider);
 
   return GoRouter(
     initialLocation: Routes.main.path,
@@ -58,7 +58,7 @@ final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
 
       return null;
     },
-    refreshListenable: authService,
+    // refreshListenable: authService,
     observers: [AnalyticsService.instance],
     routes: [
       ref.watch(_launchRoutesProvider),

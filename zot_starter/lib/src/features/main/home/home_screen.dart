@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:zot_starter/src/common/components/async_value_widget.dart';
+import 'package:zot_starter/src/common/components/item_card.dart';
 import 'package:zot_starter/src/features/main/home/home_controller.dart';
 import 'package:zot_starter/src/routing/routes.dart';
-import 'package:zot_starter/src/utils/extensions/build_context_extension/text_styles.dart';
-import 'package:zot_starter/src/utils/extensions/num_extension.dart';
 import 'package:zot_starter/src/utils/extensions/widget_extension.dart';
 
 // Any widget or screen having more than 200 lines of code is to be splitted

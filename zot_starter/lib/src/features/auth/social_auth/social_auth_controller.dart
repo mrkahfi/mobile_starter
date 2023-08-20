@@ -37,5 +37,5 @@ class SocialAuthController extends StateNotifier<SocialAuthState> {
 }
 
 final socialAuthController = StateNotifierProvider(
-  (ref) => SocialAuthController(ref.watch(authServiceProvider)),
+  (ref) => SocialAuthController(ref.watch(socialAuthServiceProvider)),
 );

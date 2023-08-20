@@ -29,7 +29,7 @@ class SocialAuthService extends ChangeNotifier {
   }
 }
 
-final authServiceProvider = ChangeNotifierProvider<SocialAuthService>(
+final socialAuthServiceProvider = ChangeNotifierProvider<SocialAuthService>(
   (ref) => SocialAuthService(
     socialAuthRepository: ref.read(socialAuthRepositoryProvider),
   ),

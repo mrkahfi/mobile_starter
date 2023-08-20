@@ -1,7 +1,7 @@
 part of '../routes.dart';
 
 final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
-  final authService = ref.watch(authServiceProvider);
+  final authStatus = ref.watch(authStateProvider);
   return ShellRoute(
     navigatorKey: _mainTabNavigatorKey,
     pageBuilder: (context, state, child) {
@@ -56,8 +56,7 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
         parentNavigatorKey: _mainTabNavigatorKey,
         redirect: (context, state) async {
           // TODO: make redirection popable
-          final status = await authService.authStatus;
-          return status == AuthStatus.unauthenticated
+          return authStatus == AuthStatus.unauthenticated
               ? Routes.login.path
               : null;
         },
