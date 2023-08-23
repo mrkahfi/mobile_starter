@@ -9,7 +9,6 @@ class ExampleRepository {
   ExampleRepository(this.exampleApi);
   final ExampleApi exampleApi;
 
-  /// This just mocks the fetch request from REST API
   Future<Result<List<Item>>> fetchItems() async {
     try {
       final response = await exampleApi.getItems();

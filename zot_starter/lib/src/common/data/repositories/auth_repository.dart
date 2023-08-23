@@ -18,6 +18,10 @@ class AuthRepository {
 
   Future<String?> get userToken => hiveService.userToken;
 
+  Stream<User?> get userStream async* {
+    yield hiveService.currentUser;
+  }
+
   Future<Result<User>> login(
     String email,
     String password,

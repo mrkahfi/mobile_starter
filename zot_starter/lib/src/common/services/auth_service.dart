@@ -1,22 +1,12 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:zot_starter/src/common/data/repositories/auth_repository.dart';
 import 'package:zot_starter/src/common/data/sources/remote/config/result.dart';
 import 'package:zot_starter/src/common/domain/entities/user.dart';
 import 'package:zot_starter/src/common/domain/enums/auth_status.dart';
 
-part 'auth_service.freezed.dart';
-
-@freezed
-class AuthState with _$AuthState {
-  factory AuthState({
-    @Default(AuthStatus.unauthenticated) AuthStatus status,
-    User? user,
-  }) = _AuthState;
-}
-
-class AuthService extends StateNotifier<AuthState> {
-  AuthService({required this.authRepository}) : super(AuthState());
+class AuthService extends ChangeNotifier {
+  AuthService(this.authRepository);
 
   final AuthRepository authRepository;
 
@@ -36,15 +26,19 @@ class AuthService extends StateNotifier<AuthState> {
         : AuthStatus.unauthenticated;
   }
 
-  User? get currentUser => authRepository.currentUser;
+  Future<User?> get currentUser async {
+    return authRepository.currentUser;
+  }
 
-  // end social auth
+  Stream<User?> get userStream {
+    return authRepository.userStream;
+  }
 }
 
-final authStateProvider = StateNotifierProvider<AuthService, AuthState>(
-  (ref) => AuthService(authRepository: ref.read(authRepositoryProvider)),
+final authServiceProvider = ChangeNotifierProvider<AuthService>(
+  (ref) => AuthService(ref.read(authRepositoryProvider)),
 );
 
-final authServiceProvider = Provider<AuthService>(
-  (ref) => AuthService(authRepository: ref.read(authRepositoryProvider)),
+final authStateProvider = StreamProvider<User?>(
+  (ref) => ref.watch(authRepositoryProvider).userStream,
 );

@@ -32,8 +32,7 @@ class LoginController extends StateNotifier<LoginState> {
   Future<void> submit(String email, String password) async {
     state = state.copyWith(value: const AsyncValue.loading());
 
-    final response =
-        await ref.read(authStateProvider.notifier).login(email, password);
+    final response = await ref.read(authServiceProvider).login(email, password);
 
     response.when(
       success: (data) {
