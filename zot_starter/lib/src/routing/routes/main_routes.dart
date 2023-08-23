@@ -14,13 +14,6 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
     },
     routes: [
       GoRoute(
-        path: Routes.main.path,
-        name: Routes.main.name,
-        parentNavigatorKey: _mainTabNavigatorKey,
-        pageBuilder: (BuildContext context, GoRouterState state) =>
-            const NoTransitionPage(child: HomeScreen()),
-      ),
-      GoRoute(
         path: MainTabRoute.tab1.path,
         parentNavigatorKey: _mainTabNavigatorKey,
         pageBuilder: (BuildContext context, GoRouterState state) =>
@@ -28,20 +21,27 @@ final Provider<ShellRoute> _mainRouteProvider = Provider<ShellRoute>((ref) {
       ),
       GoRoute(
         path: MainTabRoute.tab2.path,
-        parentNavigatorKey: _mainTabNavigatorKey,
         builder: (context, state) => const LoginScreen(),
         pageBuilder: (BuildContext context, GoRouterState state) =>
-            NoTransitionPage(
-          child: ContentScreen(title: MainTabRoute.tab2.label),
-        ),
+            const NoTransitionPage(child: ProductListScreen()),
+        routes: [
+          GoRoute(
+            path: '${Routes.productDetail.subPath}/:id',
+            name: Routes.productDetail.name,
+            pageBuilder: (BuildContext context, GoRouterState state) {
+              final productId = state.params['id']!;
+              return MaterialPage(
+                child: ProductScreen(productId: productId),
+              );
+            },
+          ),
+        ],
       ),
       GoRoute(
         path: MainTabRoute.tab3.path,
         parentNavigatorKey: _mainTabNavigatorKey,
         pageBuilder: (BuildContext context, GoRouterState state) =>
-            NoTransitionPage(
-          child: ContentScreen(title: MainTabRoute.tab3.label),
-        ),
+            const NoTransitionPage(child: ShoppingCartScreen()),
       ),
       GoRoute(
         path: MainTabRoute.tab4.path,

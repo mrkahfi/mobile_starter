@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$HomeState {
-  AsyncValue<List<Item>?> get value => throw _privateConstructorUsedError;
+  AsyncValue<List<Item>> get value => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -28,7 +28,7 @@ abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res, HomeState>;
   @useResult
-  $Res call({AsyncValue<List<Item>?> value});
+  $Res call({AsyncValue<List<Item>> value});
 }
 
 /// @nodoc
@@ -50,7 +50,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as AsyncValue<List<Item>?>,
+              as AsyncValue<List<Item>>,
     ) as $Val);
   }
 }
@@ -62,7 +62,7 @@ abstract class _$$_HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
       __$$_HomeStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({AsyncValue<List<Item>?> value});
+  $Res call({AsyncValue<List<Item>> value});
 }
 
 /// @nodoc
@@ -82,7 +82,7 @@ class __$$_HomeStateCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as AsyncValue<List<Item>?>,
+              as AsyncValue<List<Item>>,
     ));
   }
 }
@@ -90,11 +90,11 @@ class __$$_HomeStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_HomeState implements _HomeState {
-  const _$_HomeState({this.value = const AsyncValue.data(null)});
+  const _$_HomeState({this.value = const AsyncValue.data(<Item>[])});
 
   @override
   @JsonKey()
-  final AsyncValue<List<Item>?> value;
+  final AsyncValue<List<Item>> value;
 
   @override
   String toString() {
@@ -120,11 +120,10 @@ class _$_HomeState implements _HomeState {
 }
 
 abstract class _HomeState implements HomeState {
-  const factory _HomeState({final AsyncValue<List<Item>?> value}) =
-      _$_HomeState;
+  const factory _HomeState({final AsyncValue<List<Item>> value}) = _$_HomeState;
 
   @override
-  AsyncValue<List<Item>?> get value;
+  AsyncValue<List<Item>> get value;
   @override
   @JsonKey(ignore: true)
   _$$_HomeStateCopyWith<_$_HomeState> get copyWith =>

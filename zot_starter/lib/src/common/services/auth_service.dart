@@ -25,8 +25,20 @@ class AuthService extends ChangeNotifier {
         ? AuthStatus.authenticated
         : AuthStatus.unauthenticated;
   }
+
+  Future<User?> get currentUser async {
+    return authRepository.currentUser;
+  }
+
+  Stream<User?> get userStream {
+    return authRepository.userStream;
+  }
 }
 
 final authServiceProvider = ChangeNotifierProvider<AuthService>(
   (ref) => AuthService(ref.read(authRepositoryProvider)),
+);
+
+final authStateProvider = StreamProvider<User?>(
+  (ref) => ref.watch(authRepositoryProvider).userStream,
 );

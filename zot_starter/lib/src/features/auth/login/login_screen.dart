@@ -8,6 +8,7 @@ import 'package:zot_starter/src/app/constants/constants.dart';
 import 'package:zot_starter/src/common/components/button.dart';
 import 'package:zot_starter/src/common/components/textfield.dart';
 import 'package:zot_starter/src/features/auth/login/login_controller.dart';
+import 'package:zot_starter/src/features/auth/social_auth/social_auth_section.dart';
 import 'package:zot_starter/src/localization/locale_keys.g.dart';
 import 'package:zot_starter/src/routing/routes.dart';
 
@@ -32,6 +33,8 @@ class LoginScreen extends StatelessWidget {
             ),
             Gap.h24,
             const LoginInputSection(),
+            Gap.h24,
+            const SocialAuthSection(),
           ],
         ),
       ),

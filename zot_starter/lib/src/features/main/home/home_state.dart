@@ -7,6 +7,6 @@ part 'home_state.freezed.dart';
 @freezed
 class HomeState with _$HomeState {
   const factory HomeState({
-    @Default(AsyncValue.data(null)) AsyncValue<List<Item>?> value,
+    @Default(AsyncValue.data(<Item>[])) AsyncValue<List<Item>> value,
   }) = _HomeState;
 }
