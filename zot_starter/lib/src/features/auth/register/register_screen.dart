@@ -29,6 +29,7 @@ class RegisterScreen extends StatelessWidget {
             ),
             Gap.h24,
             const RegisterInputSection(),
+            Gap.h16,
           ],
         ),
       ),

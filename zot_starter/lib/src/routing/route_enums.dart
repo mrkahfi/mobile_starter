@@ -5,7 +5,10 @@ enum Routes {
   splash,
   login,
   register,
-  main;
+  main,
+  products,
+  productDetail,
+  ;
 
   String get path => '/${name.toKebabCase}';
 
@@ -21,7 +24,7 @@ enum MainTabRoute {
   ;
 
   String get path {
-    return '/${name.toKebabCase}';
+    return '${Routes.main.path}/${name.toKebabCase}';
   }
 
   Widget get icon {

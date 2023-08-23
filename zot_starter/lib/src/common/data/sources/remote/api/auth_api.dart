@@ -16,6 +16,9 @@ abstract class AuthApi {
   @POST(Endpoint.login)
   Future<UserResponse> login(@Body() Map<String, dynamic> body);
 
+  @POST(Endpoint.socialLogin)
+  Future<UserResponse> socialLogin(@Body() Map<String, dynamic> body);
+
   @POST(Endpoint.register)
   Future<UserResponse> register(@Body() Map<String, dynamic> body);
 
