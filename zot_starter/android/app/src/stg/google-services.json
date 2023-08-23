@@ -151,6 +151,78 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:295940299179:android:ba767e9d3fc72909941aee",
+        "android_client_info": {
+          "package_name": "com.justapp.mobile.stg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295940299179-k7uhpv34v37n5qfaa98kl90oboqrld7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsPq8zAngJOLUSAUHE-gMPLqwRiGtapF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295940299179-k7uhpv34v37n5qfaa98kl90oboqrld7j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "295940299179-bvessn490fpa5664fcu4sbi2kfaa7m3n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.demoapp.ios.stg"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295940299179:android:e85c92d6a15f1cf2941aee",
+        "android_client_info": {
+          "package_name": "com.kahfiapp.android.stg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295940299179-k7uhpv34v37n5qfaa98kl90oboqrld7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsPq8zAngJOLUSAUHE-gMPLqwRiGtapF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295940299179-k7uhpv34v37n5qfaa98kl90oboqrld7j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "295940299179-bvessn490fpa5664fcu4sbi2kfaa7m3n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.demoapp.ios.stg"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:295940299179:android:42880a10c7d33aca941aee",
         "android_client_info": {
           "package_name": "com.material.app.stg"

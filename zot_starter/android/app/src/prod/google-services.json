@@ -151,6 +151,78 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:ef0a1659cce9937b1cd836",
+        "android_client_info": {
+          "package_name": "com.justapp.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:6bbc8f008f778d5b1cd836",
+        "android_client_info": {
+          "package_name": "com.kahfiapp.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:276303003139:android:6a9bc6af6ecd48b81cd836",
         "android_client_info": {
           "package_name": "com.material.app"

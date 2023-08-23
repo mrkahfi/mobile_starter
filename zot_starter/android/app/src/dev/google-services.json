@@ -151,6 +151,78 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:948419051365:android:fa31cbebeb48b4c72aeb8c",
+        "android_client_info": {
+          "package_name": "com.justapp.mobile.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1u-iJnEsl4gY8Knm3A9DSbrBkAHr_Q6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "948419051365-4ruj9eh8lq2urm5508h7luc45od94goo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appbaru.mobile.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948419051365:android:f20f5ceb06d894cc2aeb8c",
+        "android_client_info": {
+          "package_name": "com.kahfiapp.android.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1u-iJnEsl4gY8Knm3A9DSbrBkAHr_Q6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948419051365-75od0br68ohem2o9ljakod1kg948gaar.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "948419051365-4ruj9eh8lq2urm5508h7luc45od94goo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appbaru.mobile.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:948419051365:android:c5d26a0cc15a3c202aeb8c",
         "android_client_info": {
           "package_name": "com.material.app.dev"

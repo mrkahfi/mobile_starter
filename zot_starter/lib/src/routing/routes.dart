@@ -7,12 +7,9 @@ import 'package:zot_starter/src/common/services/auth_service.dart';
 import 'package:zot_starter/src/features/auth/login/login_screen.dart';
 import 'package:zot_starter/src/features/auth/logout/logout_button.dart';
 import 'package:zot_starter/src/features/auth/register/register_screen.dart';
-import 'package:zot_starter/src/features/cart/presentation/shopping_cart/shopping_cart_screen.dart';
 import 'package:zot_starter/src/features/main/home/home_screen.dart';
 import 'package:zot_starter/src/features/main/main_screen.dart';
 import 'package:zot_starter/src/features/onboarding/onboarding_screen.dart';
-import 'package:zot_starter/src/features/products/presentation/products_list/product_list_screen.dart';
-import 'package:zot_starter/src/features/products/presentation/products_list/product_screen.dart';
 import 'package:zot_starter/src/features/splash/splash_screen.dart';
 import 'package:zot_starter/src/logging/analytics.dart';
 import 'package:zot_starter/src/utils/dynamic_link/dynamic_link_notifier.dart';
@@ -27,7 +24,6 @@ part 'route_enums.dart';
 part 'routes/auth_routes.dart';
 part 'routes/launch_routes.dart';
 part 'routes/main_routes.dart';
-part 'routes/product_routes.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _initNavigatorKey = GlobalKey<NavigatorState>();
@@ -48,6 +44,7 @@ final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
 
       final goingToInit = state.subloc == Routes.splash.path;
       final goingToOnboard = state.subloc == Routes.onboarding.path;
+      final goingToMain = state.subloc == Routes.main.path;
 
       if (!initialized && !goingToInit) {
         return Routes.splash.path;
@@ -57,6 +54,8 @@ final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
         return Routes.onboarding.path;
       }
 
+      if (goingToMain) return MainTabRoute.tab1.path;
+
       return null;
     },
     refreshListenable: authService,
@@ -65,19 +64,6 @@ final Provider<GoRouter> goRouterProvider = Provider<GoRouter>((ref) {
       ref.watch(_launchRoutesProvider),
       ref.watch(_authRoutesProvider),
       ref.watch(_mainRouteProvider),
-      GoRoute(
-        path: Routes.main.path,
-        parentNavigatorKey: _rootNavigatorKey,
-        name: Routes.main.name,
-        redirect: (context, state) => MainTabRoute.tab1.path,
-      ),
-      GoRoute(
-        parentNavigatorKey: _rootNavigatorKey,
-        path: Routes.products.path,
-        name: Routes.products.name,
-        builder: (BuildContext context, GoRouterState state) =>
-            const ProductListScreen(),
-      ),
     ],
   );
 });

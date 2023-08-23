@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:zot_starter/src/app/constants/constants.dart';
 import 'package:zot_starter/src/common/domain/entities/user.dart';
-import 'package:zot_starter/src/features/cart/domain/cart.dart';
 
 class HiveService {
   final userBox = Hive.box<User>(HiveKey.userBox);
@@ -11,7 +10,6 @@ class HiveService {
   final appOnboardedBox = Hive.box<bool>(HiveKey.isOnboardedBox);
   final encryptedBox = Hive.box<String?>(HiveKey.encryptedBox);
   final themeBox = Hive.box<String>(HiveKey.themeBox);
-  final cartBox = Hive.box<Cart>(HiveKey.cartBox);
 
   set currentTheme(ThemeMode currentThemeMode) =>
       themeBox.put(HiveKey.theme, currentThemeMode.name);
@@ -53,10 +51,6 @@ class HiveService {
 
   /// Delete Ccrrent User Token
   void deleteUserToken() => encryptedBox.delete(HiveKey.userToken);
-
-  Cart get cart => cartBox.get(HiveKey.cart) ?? Cart(items: []);
-
-  set cart(Cart cart) => cartBox.put(HiveKey.cart, Cart(items: []));
 }
 
 final hiveServiceProvider = Provider<HiveService>((ref) => HiveService());

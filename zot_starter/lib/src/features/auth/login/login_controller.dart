@@ -49,4 +49,6 @@ class LoginController extends StateNotifier<LoginState> {
 }
 
 final loginControllerProvider =
-    StateNotifierProvider<LoginController, LoginState>(LoginController.new);
+    StateNotifierProvider<LoginController, LoginState>(
+  LoginController.new,
+);
