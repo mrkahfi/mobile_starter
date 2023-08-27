@@ -1,4 +1,4 @@
-class HiveKey {
+class HiveKey { static const String cartBox = 'cartBox'; static const String cart = 'cart';
   static const String userBox = 'userBox';
   static const String user = 'user';
 

@@ -18,6 +18,10 @@ class AuthRepository {
 
   Future<String?> get userToken => hiveService.userToken;
 
+  Stream<User?> get userStream async* {
+    yield hiveService.currentUser;
+  }
+
   Future<Result<User>> login(
     String email,
     String password,
@@ -71,7 +75,7 @@ class AuthRepository {
     ..deleteCurrentUser()
     ..deleteUserToken();
 
-  void dispose() => hiveService;
+  void dispose() => hiveService.close();
 }
 
 final authRepositoryProvider = Provider<AuthRepository>((ref) {

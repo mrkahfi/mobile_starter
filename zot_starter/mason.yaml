@@ -1,5 +1,8 @@
 bricks:
-  new_feature:
-    git:
-      url: "https://gitlab.zero-one-group.com/zo-group/software/mobile_bricks.git"
-      path: new_feature
+  # new_feature:
+  # git:
+  #   url: "https://gitlab.zero-one-group.com/zo-group/software/mobile_bricks.git"
+  #   path: new_feature
+
+  feature_product_cart:
+    path: ../../mobile_bricks/features/product_cart

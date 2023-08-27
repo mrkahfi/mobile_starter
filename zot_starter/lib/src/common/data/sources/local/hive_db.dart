@@ -1,4 +1,4 @@
-import 'dart:convert';
+import 'package:zot_starter/src/features/cart/domain/cart.dart'; import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -8,7 +8,7 @@ import 'package:zot_starter/src/common/domain/entities/user.dart';
 
 class HiveDB {
   static Future<void> init() async {
-    await Hive.initFlutter();
+    await Hive.initFlutter(); Hive.registerAdapter(CartAdapter());  await Hive.openBox<Cart>(HiveKey.cartBox);
 
     Hive.registerAdapter(UserAdapter());
     // TODO: register more entity Adapters here
