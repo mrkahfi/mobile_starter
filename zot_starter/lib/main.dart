@@ -49,7 +49,7 @@ void main() {
             fallbackLocale: AppConstants.localeID,
             supportedLocales: const [
               AppConstants.localeID,
-              AppConstants.localeEN
+              AppConstants.localeEN,
             ],
             path: AppConstants.translationsAssetPath,
             assetLoader: const CodegenLoader(),

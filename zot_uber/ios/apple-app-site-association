@@ -1,0 +1,18 @@
+{
+  "applinks": {
+      "details": [
+      {
+        "appID": "appleTeamId.com.zotuber.ios.dev",
+        "paths": ["*"]
+      },
+      {
+        "appID": "appleTeamId.com.zotuber.ios.stg",
+        "paths": ["*"]
+      },
+      {
+        "appID": "appleTeamId.com.zotuber.ios",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

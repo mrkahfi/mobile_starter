@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Dev",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define=API_URL=https://zot-starter-dev.web.app/",
+                "--dart-define=ENV=DEV",
+                "--flavor=dev"
+            ]
+        }, 
+        {
+            "name": "Staging",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define=API_URL=https://zot-starter-stg.web.app/",
+                "--dart-define=ENV=STG",
+                "--flavor=stg"
+            ]
+        },
+        {
+            "name": "Prod",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define=API_URL=https://zot-starter-prod.web.app/",
+                "--dart-define=ENV=PROD",
+                "--flavor=prod"
+            ]
+        },
+    ]
+}

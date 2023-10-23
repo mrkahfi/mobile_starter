@@ -84,14 +84,14 @@ class ShoppingCartItemContents extends ConsumerWidget {
             product: product,
             item: item,
             itemIndex: itemIndex,
-          )
+          ),
         ] else ...[
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
             child: Text(
               'Quantity: ${item.quantity}'.hardcoded,
             ),
-          )
+          ),
         ],
       ],
     );
