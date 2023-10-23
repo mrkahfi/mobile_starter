@@ -25,7 +25,7 @@ class SplashScreen extends ConsumerWidget {
               Text(
                 'Splash Screen',
                 style: TextStyle(color: context.onPrimary),
-              )
+              ),
             ],
           ),
         ),

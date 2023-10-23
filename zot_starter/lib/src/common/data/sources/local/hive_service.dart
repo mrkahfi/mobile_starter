@@ -1,8 +1,9 @@
-import 'package:zot_starter/src/features/cart/domain/cart.dart'; import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:zot_starter/src/app/constants/constants.dart';
 import 'package:zot_starter/src/common/domain/entities/user.dart';
+import 'package:zot_starter/src/features/cart/domain/cart.dart';
 
 class HiveService { final cartBox = Hive.box<Cart>(HiveKey.cartBox); Cart get cart => cartBox.get(HiveKey.cart) ?? Cart(items: []);  set cart(Cart cart) => cartBox.put(HiveKey.cart, Cart(items: []));
   final userBox = Hive.box<User>(HiveKey.userBox);

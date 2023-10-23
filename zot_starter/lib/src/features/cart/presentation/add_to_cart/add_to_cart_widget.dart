@@ -67,7 +67,7 @@ class AddToCartWidget extends ConsumerWidget {
             style: Theme.of(context).textTheme.bodySmall,
             textAlign: TextAlign.center,
           ),
-        ]
+        ],
       ],
     );
   }

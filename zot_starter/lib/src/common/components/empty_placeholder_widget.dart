@@ -29,7 +29,7 @@ class EmptyPlaceholderWidget extends StatelessWidget {
             CommonButton(
               onPressed: () => context.goNamed(Routes.main.name),
               'Go Home'.hardcoded,
-            )
+            ),
           ],
         ),
       ),

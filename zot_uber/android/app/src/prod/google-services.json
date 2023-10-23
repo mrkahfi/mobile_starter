@@ -1,0 +1,514 @@
+{
+  "project_info": {
+    "project_number": "276303003139",
+    "project_id": "zot-starter-prod",
+    "storage_bucket": "zot-starter-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:4f4b6d8404bf49771cd836",
+        "android_client_info": {
+          "package_name": "com.appbaru.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:68ed7abc8116cbfe1cd836",
+        "android_client_info": {
+          "package_name": "com.demoapp.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:ddc1997b137dfdb41cd836",
+        "android_client_info": {
+          "package_name": "com.demoapp.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:8ba2c00d13db32771cd836",
+        "android_client_info": {
+          "package_name": "com.justapp.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:ef0a1659cce9937b1cd836",
+        "android_client_info": {
+          "package_name": "com.justapp.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:6bbc8f008f778d5b1cd836",
+        "android_client_info": {
+          "package_name": "com.kahfiapp.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:5a4b4390ed45c7221cd836",
+        "android_client_info": {
+          "package_name": "com.kahfiapp.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:6a9bc6af6ecd48b81cd836",
+        "android_client_info": {
+          "package_name": "com.material.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:5e30f0969277e9df1cd836",
+        "android_client_info": {
+          "package_name": "com.newsupreme.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:0fadbed90def28931cd836",
+        "android_client_info": {
+          "package_name": "com.simpleapp.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:0095e3efdf0eb67c1cd836",
+        "android_client_info": {
+          "package_name": "com.solarpanel.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:ea0041a3adb1557b1cd836",
+        "android_client_info": {
+          "package_name": "com.supremebaru.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:27363ca28ac458011cd836",
+        "android_client_info": {
+          "package_name": "com.uber.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276303003139:android:bafa4acb9bf9d8491cd836",
+        "android_client_info": {
+          "package_name": "com.zot_starter.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJl13TSAF-UdLoSRb_zL-a4htdgejd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276303003139-8ucf28r9lmh61jmrv5kh6cs4qa509g94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276303003139-4l6ugm2skgftlvsufd6m5mlggkjtp8gb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solarpanel.ios"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

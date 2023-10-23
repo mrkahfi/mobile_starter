@@ -131,7 +131,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                         },
                       ),
                     ],
-                  )
+                  ),
               ],
             ),
             Gap.h20,

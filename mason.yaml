@@ -1,3 +1,5 @@
 bricks:
   app_scaffolding:
-    path: ../mobile_bricks/app_scaffolding
+    git:
+      url: "https://gitlab.zero-one-group.com/zo-group/software/mobile_bricks.git"
+      path: app_scaffolding
