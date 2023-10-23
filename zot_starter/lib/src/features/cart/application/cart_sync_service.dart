@@ -6,7 +6,6 @@ import 'package:zot_starter/src/common/data/repositories/remote_cart_repository.
 import 'package:zot_starter/src/common/services/auth_service.dart';
 import 'package:zot_starter/src/features/cart/domain/cart.dart';
 import 'package:zot_starter/src/features/cart/domain/cart_item.dart';
-import 'package:zot_starter/src/features/cart/domain/mutable_cart.dart';
 import 'package:zot_starter/src/features/products/data/products_repository.dart';
 
 class CartSyncService {

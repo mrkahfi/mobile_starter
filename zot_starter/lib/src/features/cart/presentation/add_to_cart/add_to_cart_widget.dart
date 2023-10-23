@@ -8,7 +8,6 @@ import 'package:zot_starter/src/common/components/button.dart';
 import 'package:zot_starter/src/features/cart/application/cart_service.dart';
 import 'package:zot_starter/src/features/cart/presentation/add_to_cart/add_to_cart_controller.dart';
 import 'package:zot_starter/src/features/products/domain/product.dart';
-import 'package:zot_starter/src/utils/extensions/async_value.dart';
 import 'package:zot_starter/src/utils/extensions/string_extension.dart';
 
 /// A widget that shows an [ItemQuantitySelector] along with a [CommonButton]

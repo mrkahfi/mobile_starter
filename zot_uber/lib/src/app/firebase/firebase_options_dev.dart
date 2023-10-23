@@ -59,7 +59,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAMt18PudSZxYVrd3ps-71ZU0qa50Py46g',
-    appId: '1:948419051365:ios:97676feb8cd43b392aeb8c',
+    appId: '1:948419051365:ios:bc744ddda499a7592aeb8c',
     messagingSenderId: '948419051365',
     projectId: 'zot-starter-dev',
     storageBucket: 'zot-starter-dev.appspot.com',

@@ -88,7 +88,6 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CommonTextfield(
-          key: const Key('email_field'),
           controller: _emailEditingController,
           hintText: tr(LocaleKeys.email),
           label: LocaleKeys.email.tr(),
@@ -99,7 +98,6 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
         ),
         Gap.h4,
         CommonTextfield(
-          key: const Key('password_field'),
           controller: _passwordEditingController,
           hintText: tr(LocaleKeys.password),
           label: LocaleKeys.password.tr(),
@@ -122,7 +120,6 @@ class _LoginInputSectionState extends ConsumerState<LoginInputSection> {
             Expanded(
               child: CommonButton(
                 'Login',
-                key: const Key('login_button'),
                 isDisabled: ref.watch(loginControllerProvider).status !=
                     FormzStatus.valid,
                 isLoading: ref.watch(loginControllerProvider).value.isLoading,

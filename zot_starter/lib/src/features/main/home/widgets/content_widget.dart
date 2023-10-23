@@ -58,7 +58,7 @@ class _ContentWidget extends ConsumerWidget {
                 ),
               ),
             ),
-            16.0.gapH
+            16.0.gapH,
           ],
         );
       },

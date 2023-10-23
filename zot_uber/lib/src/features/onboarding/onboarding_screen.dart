@@ -123,7 +123,6 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                       const Spacer(),
                       CommonButton(
                         'Next',
-                        key: const Key('next_button'),
                         onPressed: () {
                           _controller.nextPage(
                             duration: const Duration(milliseconds: 300),
